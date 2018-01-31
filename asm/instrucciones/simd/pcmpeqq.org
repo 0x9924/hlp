@@ -1,0 +1,12 @@
+* pcmpeqq: Compare Packed Qword Data fo Equal
+** Operación:
+#+beguin_src python
+if DEST[63:0] == SRC[63:0]:
+    DEST[63:0] <- 0xFFFFFFFFFFFFFFFF
+else:
+    DEST[63:0] <- 0x0
+if DEST[127:64] == SRC[127:64]:
+    DEST[63:0] <- 0xFFFFFFFFFFFFFFFF
+else:
+    DEST[127:64] <- 0x0
+#+end

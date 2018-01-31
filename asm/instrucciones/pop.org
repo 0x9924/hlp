@@ -1,0 +1,8 @@
+* pop - pop a value from the stack
+1 Load value from stack
+2 increment stack pointer
+
+** Operacion
+
+SRC <- Memory[SS:SP] 
+SP <- SP + RegisterSize

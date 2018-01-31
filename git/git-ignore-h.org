@@ -1,0 +1,4 @@
+
+|--------------------------------------+--------------------------------------------|
+| keep local version of file different | git update-index --assume-unchanged <file> |
+|                                      |                                            |

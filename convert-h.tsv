@@ -1,0 +1,1 @@
+for f in *.*; do convert "SOPARIESGOAMB.png" -resize 595x842 -gravity center -background white  -extent 595x842 resize/"SOPARIESGOAMB.png"; done

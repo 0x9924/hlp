@@ -1,0 +1,5 @@
+|----+----------------------------|
+| $@ | left side of : in rule     |
+| $< | first item of dependencies |
+| $^ | right side of : in rule    |
+

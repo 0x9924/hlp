@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\newtheorem{mydef}{Definici\'on}
+\newtheorem{prop}{Proposici\'on}
+
+\begin{document}
+
+\title{Variables aleatorias discretas}
+\author{nsm}
+
+\maketitle
+
+\begin{mydef}[Variable Aleatoria]
+  Sea $S$ un espacio muestral asociado con un experimento Aleatorio.
+  Una \emph{variable aleatoria} $X$ es una funci\'on que asocia a
+  cada elemento $\omega \in S$ un n\'umero real. Es decir:
+  \[
+    X: S \to \mathbb{R}
+  \]
+\end{mydef}
+
+\begin{mydef}[Rango de una v.a.]
+  El conjunto de todos los valores posibles de una v.a. X es su rango,
+  y lo denotamos $R_X$. Es decir, es su imagen.
+\end{mydef}
+
+\begin{mydef}[v.a. discreta]
+  Una v.a. es \emph{discreta} si su rango $R_X$ es numerable
+\end{mydef}
+
+\begin{mydef}[Funci\'on de probabilidad puntual]
+  La f.p.p. de una v.a. $X$ es:
+  \[
+    p_X(x) = P(X = x) = P(\{\omega \in S : X(\omega) = x \})
+  \]
+  
+\end{mydef}
+
+\paragraph{Propiedades de la f.p.p.}
+\begin{enumerate}
+    \item $ p_X(x) \geq 0, \forall x $
+    \item $\sum_{x\in R_X} p_X(x) = 1$
+\end{enumerate}
+\
+
+\begin{mydef}[Funci\'on de distribuci\'on acumulada]
+  La \emph{distribuci\'on} de una v.a. discreta $X$ con f.p.p.
+  $p_X(x)$ se define para todo $x \in \mathbb{R}$ como:
+
+  \[
+    F_X(x) = \sum_{y \leq x, y \in \mathbb{R}} p_X(y)
+  \]
+\end{mydef}
+
+\paragraph{Propiedades de la funci\'on de distribuci\'on acumulada.}
+\begin{enumerate}
+    \item $ \forall x \in \mathbb{R} \quad F_X(x) \in [0,1] $
+    \item $ \forall x, y \quad x < y \implies F_X(x) \leq F_X(y) $
+    \item $ \lim_{h \to 0^+} F_X(x + h) = F_X(x) $
+    \item $ \lim_{x \to +\infty} F_X(x) = 1
+      \quad \land \quad \lim_{x \to -\infty} F_X(x) = 0$
+    \item $ p_X(x) = F_X(x) - F_X(\lim_{h\to 0^-} (x + h))$
+\end{enumerate}
+\
+
+\begin{prop}
+  Sean $a, b \in \mathbb{R} $ y $a \leq b$ entonces
+  \[
+    P(a \leq X \leq b) = F_X(b) - F_X(a)
+  \]
+\end{prop}
+
+\begin{mydef}[Esperanza]
+  Sea $X$ una v.a. discreta con f.p.p. $p_X(x)$. La \emph{esperanza}
+  de $X$ es:
+  \[
+    E[X] = \sum_{x \in R_X} x \cdot p_X(x)
+  \]
+  siempre que \(\sum_{x \in R_X} |x|p_X(x) < \infty\).
+\end{mydef}
+
+\paragraph{Propiedades de la Esperanza}
+\begin{enumerate}
+\item \(E[aX+b] \quad = \quad aE[X]+b \)
+\item Si $P(X = c) = 1$, entonces $E[X]= c$
+\end{enumerate}
+
+\begin{mydef}[Varianza]
+  Sea $X$ una v.a. discreta con f.p.p. $p_X(x)$ y esperanza $\mu_X$.
+  La \emph{varianza}  de $X$ es:
+  \[
+    V[X] = E[(X - \mu_X)^2]
+  \]
+\end{mydef}
+
+\begin{prop}[F\'ormula para la varianza]
+  \[
+    V[X] = E[X^2] - E[X]^2
+  \]
+\end{prop}
+\end{document}

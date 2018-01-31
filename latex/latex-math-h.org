@@ -1,0 +1,12 @@
+|-------------+-------------------------------------|
+| \emtpyset   | conjunto vacío                      |
+| \cap        | intersección                        |
+| \cup        | union de conjuntos                  |
+| \left(      | parentesis izquierdo grande         |
+| \right)     | parentesis derecho grande           |
+| \complement | complemento de un conjunto          |
+| \subset     | subconjunto                         |
+| \subseteq   | subconjunto parte                   |
+| \mathbb{R}  | reales requiere amsfonts o amssymb  |
+| \mathbb{N}  | conjunto de los naturales           |
+|             |                                     |

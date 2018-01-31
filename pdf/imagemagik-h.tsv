@@ -1,0 +1,2 @@
+# -*- mode:csv -*-
+to mono	convert INPUT.PDF -threshold 40% OUTPUT.PDF

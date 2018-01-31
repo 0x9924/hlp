@@ -1,0 +1,7 @@
+|---------------------+-------------------------------------------------------------------|
+| buckupear database  | BACKUP DATABASE MyDatabase TO DISK='E:\MyDatabase.bak'            |
+| declare variable    | DECLARE @VARNAME VAR_TYPE                                         |
+| set variable        | SET @VARNAME VALUE                                                |
+| fitrar fechas dia x | select * from sales where datediff(dd, salesDate, '20101111') = 0 |
+| filtrar fechas hoy  | select * from sales where datediff(dd, salesDate, getdate()) = 0  |
+| date / fecha        | Convert(datetime, '1970-01-01')                                   |

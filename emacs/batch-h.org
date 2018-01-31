@@ -1,0 +1,5 @@
+|             |                                                          |
+|-------------+----------------------------------------------------------|
+| org to html | emacs file.org --batch -f org-html-export-to-html --kill |
+|             |                                                          |
+

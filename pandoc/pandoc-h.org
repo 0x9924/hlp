@@ -1,0 +1,7 @@
+| pandoc                 |                                                           |
+|------------------------+-----------------------------------------------------------|
+| exportar a word        | pandoc file.md -o file.docx                               |
+| importar de word media | pandoc --extract-media=. file.docx -o file.md             |
+| margin                 | pandoc -V geometry:margin=2cm -o output.pdf input.md      |
+| odt to wikitext        | pandoc -s -t mediawiki --toc MANUAL.odt -o example22.wiki |
+|                        |                                                           |

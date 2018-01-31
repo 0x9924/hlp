@@ -1,0 +1,3 @@
+| csv mode            |                                           |
+|---------------------+-------------------------------------------|
+| set field separator | M-x customize-variable RET csv-separators |

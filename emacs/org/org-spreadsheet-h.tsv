@@ -1,0 +1,13 @@
+# -*- mode:csv -*-
+DESCRIPĆION	DESCRIPCION
+deshabilitar shift-select en org	(setq org-support-shift-select nil)	
+tabl dar referecias de filas y columnas	C-c }
+insertar una columna	M-S-<right>
+kill column	M-S-<left>
+move column	M-<rigth> | M-<left>
+update table (recalculate row)	C-c *
+update table (recalculate table)	C-uc *
+sum col range	:=vsum(@2..@12)
+mean row range	:=vmean($1..$5)
+sumar columna	C-c +
+calendar	C-c .

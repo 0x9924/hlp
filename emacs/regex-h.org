@@ -1,0 +1,3 @@
+|-----------------+-------------------------|
+| Ignore/not case | toggle-case-fold-search |
+|                 |                         |

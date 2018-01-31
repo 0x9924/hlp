@@ -1,0 +1,3 @@
+http://apuntes.github.io/
+origin	https://github.com/apuntes/apuntes.github.io (fetch)
+origin	https://github.com/apuntes/apuntes.github.io (push)

@@ -1,0 +1,4 @@
+* in al, imm8
+Copia el valor del puerto I/O especificado en el segundo operando (SRC)
+en el primer operando. El primer operando puede ser AL, AX o EAX, 
+dependiendo del tamaño del puerto accedido.

@@ -1,0 +1,12 @@
+Distribucion	tipo
+------------	----
+Geométrica	Discreta
+Binomial	Discreta
+Binomial Negativa	Discreta
+Hipergeométrica	Discreta
+Poisson	Discreta
+Uniforme	Continua
+Exponencial	Continua
+Normal	Continua
+Gamma	Continua
+

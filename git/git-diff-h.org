@@ -1,0 +1,11 @@
+| DESCRIPCION                                  | COMANDO                         |   |   |
+|----------------------------------------------+---------------------------------+---+---|
+| ver diff respecto el N commit XXX            | git diff HEAD XXX             |   |   |
+| ver diff respecto el N (num) commit anterior | git diff HEAD~N                 |   |   |
+| ver lo que cambio pero no fue 'staged'       | git diff                        |   |   |
+| git diff respect last commit file            | git diff HEAD myfile            |   |   |
+| git diff respect last commit                 | git diff HEAD^ HEAD             |   |   |
+| diff between HEAD and other commit           | git diff commit_id HEAD         |   |   |
+| diff (only filenames)                        | git diff --name-only HEAD~ HEAD |   |   |
+| diff against remote                          | git diff origin/master          |   |   |
+| diffs between local and remote branch        | git diff master origin/master   |   |   |

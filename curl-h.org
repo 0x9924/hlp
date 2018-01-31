@@ -1,0 +1,9 @@
+|-----------------------------------------+----------------------------------------------|
+| ver el http response header en FILENAME | curl -D FILENAME URL # -D es --dump-header   |
+| ver cookies en FILENAME                 | curl -c FILENAME URL # -c es --cookie-jar    |
+| ver mas                                 | curl --trace-time --trace-ascii FILENAME URL |
+| follow redirect                         | curl -L URL                                  |
+| ftp download                            | curl ftp://addr/filename.ext                 |
+| ftp list files                          | curl ftp://addr                              |
+| ftp upload                              | curl -T filename.ext ftp://addr              |
+| curl oauth                              | curl -H "Authorization : Bearer <token>" URL |

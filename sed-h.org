@@ -1,0 +1,17 @@
+|------------------------------------+-----------------------------------------|
+| sed line N, forma 1                | sed -n '52p'                            |
+| sed line N, forma 2                | sed '52!d'                              |
+| sed line N, forma 3                | sed '52q;d'                             |
+| agregar la string al inicio de una | sed -i "$LINE/^/${STR}/" "$FILE"        |
+| replace string                     | sed "s/${STRfrom}/${STRto}/g" "$FILE"   |
+| replace _in_ file                  | sed -i s/${STRfrom}/${STRto}/g" "$FILE" |
+<<<<<<< HEAD
+| print from STR to the end of file  | sed -n -e '/STR/,$p'                    |
+| print from following to STR        | ed -e '1,/STR/d'                        |
+| printf lines before STR            | sed -e '1,/STR/d'                       |
+=======
+| print entre STR1 y STR2            | sed -n '/STR1/,/STR2/p'                 |
+>>>>>>> 45e5452d8b714234dd388c11bc18352e6cf0d4b1
+|                                    |                                         |
+
+

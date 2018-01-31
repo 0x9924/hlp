@@ -1,0 +1,10 @@
+Aplicar: 
+    ./w3m-0.5.2-glibc2.14-fix_file_handle_error.patch
+Y también:
+    ./Makefile.diff
+
+El  último lo único que hace es agregar -lX11 a $LIBS
+
+$ ./configure --prefix=$HOME
+$ make
+$ make install

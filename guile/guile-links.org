@@ -1,0 +1,31 @@
+* guile
+** guile-web
+git://git.savannah.gnu.org/guile/guile-web.git
+https://git.savannah.gnu.org/git/guile/guile-web.git
+ssh://git.savannah.gnu.org:/srv/git/guile/guile-web.git
+
+** pagina
+   https://www.gnu.org/software/guile/
+
+** git
+   git://git.sv.gnu.org/guile.git
+   http://git.sv.gnu.org/r/guile.git
+
+
+** reference
+
+*** scheme
+    https://www.gnu.org/software/mit-scheme/
+
+*** guile
+    https://www.gnu.org/software/guile/manual/
+
+** tutorial
+*** Tortoise
+    https://www.gnu.org/software/guile/docs/guile-tut/tutorial.html
+
+** etc
+*** aa-tree
+https://savannah.nongnu.org/projects/guile-aa-tree/
+
+https://www.mail-archive.com/guile-user@gnu.org/msg09641.html

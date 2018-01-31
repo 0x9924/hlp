@@ -1,0 +1,19 @@
+| gpg                  |                                                           |
+|----------------------+-----------------------------------------------------------|
+| obtener hash         | gpg --print-md md5 file.txt                               |
+| ver algoritmos       | gpg --version                                             |
+| encriptar con algo   | gpg -o myfile.gpg --cipher-algo AES256 --symmetric myfile |
+| tar and encript      | tar -cz FILENAME -> gpg -c -o OUT_FILENAME                |
+| unpack encripted tar | gpg -d FILENAME -> tar xz                                 |
+| generar key pair     | gpg --gen-key                                             |
+| exportar clave       | gpg --output alice.gpg --export alice@cyb.org             |
+| importar clave       | gpg --import PUBLICK-KEY                                  |
+|----------------------+-----------------------------------------------------------|
+| trust key            | gpg --edit-key EMAIL                                      |
+|                      | trust                                                     |
+|----------------------+-----------------------------------------------------------|
+| sign (firmar)        | gpg --local-user EMAIL -o FILE.sig --sign FILE            |
+| verificar            | gpg -o FILE --decrypt FILE.sig                            |
+|----------------------+-----------------------------------------------------------|
+| sign detached        | gpg --local-user EMAIL -o FILE.sig --detach-sign FILE     |
+| verificar detached   | gpg --verify SIGNATURE.sig FILE ...                       |

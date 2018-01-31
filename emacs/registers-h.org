@@ -1,0 +1,6 @@
+| emacs registers                  | shortkey        | cmd                |
+|----------------------------------+-----------------+--------------------|
+| copy region into register _r_    | C-x r s _r_     | (copy-to-register) |
+| insert region from register _r_  | C-x r i _r_     | (insert-register)  |
+| save position in register r      | C-x r <SPC> _r_ |                    |
+| jump to pos stored in register r | C-x r j _r_     |                    |

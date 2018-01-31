@@ -1,0 +1,4 @@
+|-----------------+----------------------------------------------|
+| get a elements  | xmllint --html --xpath '//a' file.html       |
+| get href from a | xmllint --html --xpath '//a/@href' file.html |
+|                 |                                              |

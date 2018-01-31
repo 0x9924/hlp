@@ -1,0 +1,20 @@
+|---------------------------------+-------------------------------------------------------------------------|
+| _id                             | 12 bytes hex con: timestamp (4), machine id (3), proces id (2), inc (3) |
+| comando use                     | use DATABASE_NAME                                                       |
+| list databases                  | show dbs                                                                |
+| eliminar db                     | db.dropDatabase()                                                       |
+| crear collection (tabla)        | db.createCollecion("name", opts)                                        |
+| listar collections              | show collections                                                        |
+| eliminar collection             | db.COLLECTION_NAME.drop()                                               |
+| insertar document               | db.COLLECTION_NAME.insert(document)                                     |
+| mostrar contenido de collection | db.COLLECTIO_NAME.find().pretty()                                       |
+| WHERE campo a <= 10             | db.COLL_NAME.find({ "a" : { $lte : 10}})                                |
+| OR                              | db.COLL_NAME.find({ $or : [ {key1:value1}, {key2:value2}]})             |
+| UPDATE                          | db.COLLNM.update({"a":"1"}, {$set:{"a":"100"}}, {multi:true})           |
+| SAVE (reemplaza)                | db.COLLNM.save.({_id.ObjectId(), NEW_DATA})                             |
+| borrar document                 | db.COLLNM.remove(DELETION_CRITERI, 1)                                   |
+| projection                      | db.COLLNM.find.({}, {KEY1:1, KEY2:1, ..., KEYn})                        |
+| LIMIT                           | db.COLLNM.find().limit(num)                                             |
+| SKIP                            | db.COLLNM.find().limit.(NUM).skip(NUM)                                  |
+|                                 |                                                                         |
+

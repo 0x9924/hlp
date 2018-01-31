@@ -1,0 +1,4 @@
+# -*- mode:csv -*-
+hostear localmente	python -m pelican.server
+github hostear localmente 	make html && make serve
+subir a hithub	make github

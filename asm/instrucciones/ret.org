@@ -1,0 +1,14 @@
+* ret - Return From Procedurexs
+
+| ret       | return to calling procedure                                  |
+| ret imm16 | return to calling procedure and pop /imm16/ bytes from stack |
+
+Transfiere el control a una dirección de retorno ubicada en el tope
+de la pila. Esta dirección es ubicada allí usualmente por la instrucción
+CALL. Así, RET retorna a la intrucción siguiente a CALL.
+
+** operacion
+#+begin_src
+
+IP <- POP
+#+end_src

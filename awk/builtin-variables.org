@@ -1,0 +1,11 @@
+|--------+---------------------------------------------------|
+| ARGC   | number of command line args                       |
+| ARGIND | index in ARGV of the current file                 |
+| ARGV   | array of command line args                        |
+| FS     | field separator (default = space)                 |
+| FNR    | the input record number in the current input file |
+| NF     | number of fields in current record                |
+| NR     | number of records in input file seen so far       |
+| OFS    | output field separator (default = space)          |
+| ORS    | output record separator (default = newline)       |
+| RS     | record separator                                  |

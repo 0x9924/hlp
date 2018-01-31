@@ -1,0 +1,11 @@
+|------------------+-----------------------------------------------------------------------------------------+-----------|
+| type             | Image format conversion                                                                 |           |
+|------------------+-----------------------------------------------------------------------------------------+-----------|
+| '.png'           | pngtopnm filename.png                                                                   | ocrad.    |
+| '.png'           | pngtopnm filename.png                                                                   | ocrad -i. |
+| ps or pdf        | gs -sPAPERSIZE=a4 -sDEVICE=pnmraw -r300 -dNOPAUSE -dBATCH -sOutputFile=- -q filename.ps | ocrad.    |
+| ps or pdf        | pstopnm -stdout -dpi=300 -pgm filename.ps                                               | ocrad,    |
+| '.tiff'          | tifftopnm filename.tiff                                                                 | ocrad.    |
+| '.jpg'           | djpeg -greyscale -pnm filename.jpg                                                      | ocrad.    |
+| '.pnm.gz'        | gzip -cd filename.pnm.gz                                                                | ocrad     |
+| '.pnm.lz'        | lzip -cd filename.pnm.lz                                                                | ocrad     |

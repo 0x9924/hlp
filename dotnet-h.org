@@ -1,0 +1,3 @@
+|------------------------+----------------|
+| restore nuget packages | dotnet restore |
+| run server             | dotnet run     |

@@ -1,0 +1,13 @@
+pcmeqq xmmX, xmmX ; xmmX <- 1s
+
+pxor xmmX, xmmX ; xmmX <- 0s
+
+movdqu xmmX, [reg] ; cargo unaligned data en xmmX
+
+pcmpgtd xmmX, xmmY ; if X > Y ->  X <- 1s else X -> X <- 0s
+
+pslldq xmmX, N  ; shift left N bytes de todo xmmX
+
+psll{d} xmmX, N ; shift left packed {d} in xmmX N bits
+
+psra{d} xmmX, N ; shift right packed {d} in xmmX artimetico N bits

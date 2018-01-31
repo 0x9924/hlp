@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for f in *.asm
+do
+    nasm -f elf64 -o ${f/.asm/.o} ${f}
+done
+# nasm -f elf64 -o unosc.o uno-sin-convencion.asm &&\
+# nasm -f elf64 -o uno.o uno.asm &&\
+# nasm -f elf64 -o add.o add.asm &&\
+# nasm -f elf64 -o equis.o equis.asm &&\
+gcc uso-extern.c *.o &&\
+./a.exe
+ 

@@ -1,0 +1,23 @@
+# -*- mode:csv -*-
+TECLAS 	
+=	info sobre el documento
+C-u	ir al hiperlink previo
+Z	ir al centro
+J	bajar una linea
+K	subir una linea
+TAB	proximo hiperlink
+C-u	hiperlink anterior
+B	volver atras (al buffer anterior)
+v	ver html
+D	delete current buffer
+H	get help
+U	go to url
+u	go to relative url
+c	peek current url
+T	open new tab
+{	move to previoustab
+}	move to next tab
+Esc-I	save image
+S	save buffer
+ESC s	save current html
+yank	sh -c 'printf %s "$0" | xsel -b' # in extbrowser

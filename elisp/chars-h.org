@@ -1,0 +1,4 @@
+|                         |                  |
+|-------------------------+------------------|
+| NUM es char cod valido? | (characterp NUM) |
+| char c to num           | ?c               |

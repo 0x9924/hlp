@@ -1,0 +1,3 @@
+nasm -ggdb -f elf64 -o objs/imprime_i.o imprime_i.asm
+gcc -c -m64 -o objs/imprime_pars.o imprime_pars.c 
+gcc -g -m64 objs/imprime_i.o objs/imprime_pars.o

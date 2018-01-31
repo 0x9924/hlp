@@ -1,0 +1,6 @@
+# -*- mode:csv -*-
+listar archivos en tar file	tar -tvf FILE.tar
+untar specified file	tar -xzf FILE.tar WANTED_FILENAME
+tar files PATTERN	tar -cfv FILE.tar PATTERN
+unpack encripted tar	gpg -d FILENAME | tar xz
+update file	tar -uvf FILE.tar FILE_TO_UPDATE_1 FILE_TO_UPDATE_2

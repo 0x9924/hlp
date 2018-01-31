@@ -1,0 +1,9 @@
+* mul
+
+| instruction | description            |
+|-------------+------------------------|
+| mul r/m8    | ax      <- al * r/m8   |
+| mul r/m16   | dx:ax   <- ax * r/m16  |
+| mul r/m32   | edx:eax <- eax * r/m32 |
+| mul r/m64   | rdx:rax <- rax * r/m64 |
+

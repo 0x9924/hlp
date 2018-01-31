@@ -1,0 +1,10 @@
+| otros comandos                |                                  |
+|-------------------------------+----------------------------------|
+| instalar paquetes             | M-x list-packages                |
+| REPL                          | M-x ielm                         |
+| change default browser        | browse-url-browser-function #var |
+| eval expr in echo area        | M-:                              |
+| ver si estor en terminal o no | (display-graphic-p)              |
+| ir a theme                    | (load-theme 'manoj-dark)         |
+
+

@@ -1,0 +1,31 @@
+[[http://stackoverflow.com/questions/3829271/how-can-i-clone-an-sql-server-database-on-the-same-server-in-sql-server-2008-exp][stackoverflow]]
+
+In SQL:
+
+USE master;
+GO 
+EXEC sp_detach_db
+    @dbname = N'OriginalDB';
+GO
+
+At Command prompt (I've simplified the file paths for the sake of this example):
+
+copy c:\OriginalDB.mdf c:\NewDB.mdf
+copy c:\OriginalDB.ldf c:\NewDB.ldf
+In SQL again:
+
+USE master;
+GO
+CREATE DATABASE OriginalDB
+    ON (FILENAME = 'C:\OriginalDB.mdf'),
+       (FILENAME = 'C:\OriginalDB.ldf')
+    FOR ATTACH;
+GO
+CREATE DATABASE NewDB
+    ON (FILENAME = 'C:\NewDB.mdf'),
+       (FILENAME = 'C:\NewDB.ldf')
+    FOR ATTACH;
+GO
+
+Para encontrar los archivos 
+select * from OriginalDB.sys.sysfiles

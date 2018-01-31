@@ -1,0 +1,20 @@
+|-----------------------------------+---------------------|
+| show matching files (regex) brief | C-x C-d REGEX       |
+| sort with ls command              | C-u s               |
+| mark a file                       | m                   |
+| umark file                        | u                   |
+| unmark all files                  | U                   |
+| mark all directories              | */                  |
+| mark all symbolic links           | *@                  |
+| mark all executables              | **                  |
+| invert marking                    | t                   |
+| mark all                          | *s                  |
+| mark files matching regex (== %m) | *%                  |
+| delete marked filed               | D                   |
+| mark files prompting regex        | %m                  |
+| dont show marked lines            | dired-do-kill-lines |
+| sort by size                      | C-u s               |
+| sort by tiem                      | C-u t               |
+| mark by regex                     | %m                  |
+| dired - mostrar menos info        | (                   |
+| show only files matching pattern  | C-x d PATTERN       |

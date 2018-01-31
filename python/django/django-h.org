@@ -1,0 +1,6 @@
+|-------------------------+-------------------------------------|
+| create a project        | django-admin startproject mysite    |
+| run development server  | python manage.py runserver          |
+| create an app           | python manage.py startapp appname   |
+| hacer migrations de APP | python manage.py makemigrations APP |
+| aplicar las migrations  | python manage.py migrate            |

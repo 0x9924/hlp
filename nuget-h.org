@@ -1,0 +1,4 @@
+|-------+---------------------------------|
+| pack  | nuget spec; pack                |
+| subir | nuget push FILE KEY -Source URL |
+|       |                                 |

@@ -1,0 +1,11 @@
+* Jcc salto si se cumple condición
+|-------+----------------+------------------|
+| ja    | if above       | cf = 0 y zf = 0  |
+| jae   | if above or eq | cf = 0           |
+| je    | if ==          | zf = 1           |
+| jz    | if 0           | zf = 1           |
+| jg    | if >           | zf = 0 y sf = of |
+| jge   | if >=          | sf = of          |
+| jo    | if overflow    | of = 1           |
+| jrcxz | if rcx iz zero | rcx == 0         |
+

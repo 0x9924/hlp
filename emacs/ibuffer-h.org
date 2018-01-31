@@ -1,0 +1,6 @@
+M-x ibuffer	abrir ibuffer
+m	mark
+u	unmark
+*u	mark unsaved
+S	save marked buffer
+D	close marked buffers

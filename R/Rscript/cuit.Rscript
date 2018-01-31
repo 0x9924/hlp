@@ -1,0 +1,14 @@
+#!/usr/bin/Rscript
+args <- commandArgs(trailingOnly = TRUE)
+coddni <- args[1]
+x <- c(5, 4, 3, 2, 7, 6, 5, 4, 3, 2)
+y <- as.integer(unlist(strsplit(coddni, "")))
+
+v1 <- sum(x * y)
+v2 <- v1 %% 11
+v3 <- 11 - v2
+cat ("dni: ")
+cat (substr(coddni,3,10))
+cat("\ncuil: ")
+cat(coddni)
+cat(v3)

@@ -1,0 +1,9 @@
+| DESCRIPCION                                        | COMANDO                                                |
+|----------------------------------------------------+--------------------------------------------------------|
+| setear nombre de usuario                           | git config --global user.name "El nombre"              |
+| setear mail                                        | git config --global user.email user@mail.com           |
+| setear editor de texto                             | git config --global core.editor vim                    |
+| chequear los settings                              | git config --list                                      |
+| chequear un setting                                | git config user.name                                   |
+| long paths long lines                              | git config --system core.longpaths true                |
+| disable SSL certificate for repo                   | git config http.sslVerify "false"                      |

@@ -1,0 +1,40 @@
+* Cygwin (nota: en Ubunti GNU/linux no ocurre)
+Se produce un error en
+(1)
+$ ./build/random-array-print.exe # (en cygwin)
+
+que no se genera cuando, por ejemplo, hago
+
+puts(""); // (2)
+
+en random_bytes. O sea:
+
+output (1):
+
+tabla[0] 	0
+tabla[1] 	0
+tabla[2] 	0
+tabla[3] 	0
+tabla[4] 	0
+tabla[5] 	83
+tabla[6] 	6444975760
+tabla[7] 	3742232646
+tabla[8] 	25769804896
+tabla[9] 	0
+
+
+output(2)
+
+tabla[0] 	0
+tabla[1] 	0
+tabla[2] 	0
+tabla[3] 	0
+tabla[4] 	0
+tabla[5] 	0
+tabla[6] 	0
+tabla[7] 	0
+tabla[8] 	0
+tabla[9] 	0
+
+* Ubuntu
+gsl_rng_free rompe al ser llamada en random_array_ulong

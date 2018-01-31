@@ -1,0 +1,2 @@
+# -*- mode:csv -*-
+remove ocurrences of char in string 	${string//pattern/replacement}

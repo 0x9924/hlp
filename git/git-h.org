@@ -1,0 +1,29 @@
+| DESCRIPCION                                        | COMANDO                                                |
+|----------------------------------------------------+--------------------------------------------------------|
+| iniciar repositorio en el presente dir             | git init                                               |
+| clonar un repositorio existente                    | git clone [url]                                        |
+| ver status de archivos                             | git status                                             |
+| ver status 'short' de archivos                     | git status -s                                          |
+| commitear los cambios                              | git commmit -m 'MENSAJE'                               |
+| sacar archivos (remove) de git y de working dir    | git rm archivo.txt                                     |
+| sacar archivos (remove) de git y no de working dir | git rm --cached archivo.txt                            |
+| mostrar los remotos                                | git remote -v                                          |
+| agregar remotos                                    | git remote add [shortname] [url]                       |
+| traer informacion                                  | git fetch [shortname]                                  |
+| enviar informacion                                 | git push origin master                                 |
+| crear rama (branch)                                | git branch nombre                                      |
+| cambiarse a una rama (branch)                      | git checkout nombre                                    |
+| remove local branch                                | git branch -d the_local_branch                         |
+| agregar submodulo                                  | git submodule add URL                                  |
+| retroceder a un commit previo                      | git reset hard # agregar el commit al cual volver      |
+| revert uncommited changes to file or dir           | git checkout -- FILE                                   |
+| unstage all files  staged with git add             | git rese                                               |
+| revert all local uncommitted changes               | git checkout .                                         |
+| delete remote branch                               | git push origin --delete <BRANCHNAME>                  |
+| delete remote branch 2                             | git push origin :<BRANCHNAME>                          |
+| delete local branch                                | git branch -d the_local_branch                         |
+| modificar remoto change remote url                 | git remote set-url https://...                         |
+| disable SSL certificate for command                | env GIT_SSL_NO_VERIFY=true git command                 |
+| bajar carpeta especifica de github                 | svn checkout https://github.com/user/repo/trunk/folder |
+| list files in commit                               | git ls-tree --full-tree -r HEAD                        |
+|                                                    |                                                        |

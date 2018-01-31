@@ -1,0 +1,5 @@
+|--------------------------+---------|
+| Split windows            | ctrl+ws |
+| switch between windows   | ctrl+ww |
+| Quit a window            | ctrl+wq |
+| Split windows vertically | ctrl+wv |

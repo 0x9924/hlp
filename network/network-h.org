@@ -1,0 +1,14 @@
+|--------------------------------------------------------+---------------------------------+----------------------|
+| network manager                                        | nmtui                           |                      |
+| get ips from lan that already talked with your machine | arp -a                          |                      |
+| get my ip from lan                                     | ifconfig                        | grep "inet addr"     |
+| ifconfig deprecated                                    | ip a                            |                      |
+| connect via ssh with other computer                    | ssh USER@192.168.0.105          |                      |
+| copy from B to A logged in A                           | scp USER@HOST:FILE-FROM FILE-TO |                      |
+| copy from A to B logged in A                           | scp FILE-FROM USER@HOST:FILE-TO |                      |
+| copy from B to A logged in A                           | rsync HOST:FILE-FROM DIR-TO     |                      |
+| get hostname of IP-NUM                                 | nslookup IP-NUM                 |                      |
+| send dir to port 45454                                 | tar -cz .                       | nc -q 10 -l -p 45454 |
+| receive dir from $REMOTE_HOST port 45454               | nc -w 10 $REMOTE_HOST 45454     | tar -xz              |
+| install ssh/scp server                                 | openssh-server                  |                      |
+| start ssh                                              | service ssh start               |                      |

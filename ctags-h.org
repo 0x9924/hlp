@@ -1,0 +1,6 @@
+| nota      | => es pipe                                                        |
+|-----------+-------------------------------------------------------------------|
+| con ctags | ctags -e -R .                                                     |
+| con etags | find . -type f -iname "*.[ch]" => etags -                         |
+| con xargs | find . -type f -iname "*.[ch]" -print0 => xargs -0 etags --append |
+|           |                                                                   |

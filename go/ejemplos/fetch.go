@@ -1,0 +1,32 @@
+package main
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+	"os"
+)
+
+func main() {
+	for _, url := range os.Args[1:] {
+		b, err := fetchUrl(url)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
+		 	os.Exit(1)
+		}
+		fmt.Printf("%s", b)
+	}
+}
+
+func fetchUrl(url string) ([]byte, error) {
+	resp, err := http.Get(url)
+	if err != nil {
+		return nil, fmt.Errorf("error getting: %s", url,  err)
+
+	}
+	b, err := ioutil.ReadAll(resp.Body)
+	resp.Body.Close()
+	if err != nil {
+		return nil, fmt.Errorf("error reading: %s", url, err)
+	}
+	return b, nil
+}

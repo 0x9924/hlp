@@ -1,0 +1,8 @@
+# -*- mode:csv -*-
+horizontal rule <hr>
+unordered list	<ul></ul>
+list item	<li></li>
+latex en html	<script type="text/javascript"\n src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">\n</script>
+ordered list	<ol></ol>
+padding li	 padding: 0px;
+justificar el body	<style> body { text-align:justify } </style>

@@ -1,0 +1,7 @@
+# en R
+> install.packages("PACKAGE_NAME")
+# del tar:
+> install.packages("PACKAGE_NAME", repos=NULL, type="source")
+
+# setear repositorios
+> setRepositories()

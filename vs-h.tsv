@@ -1,0 +1,5 @@
+# -*- mode:csv -*-
+indent region	C-k C-d
+comment region	C-k C-c
+uncomment region	C-k C-u
+

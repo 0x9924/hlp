@@ -1,0 +1,14 @@
+# -*- mode:csv -*-
+grep ejemplo	select-string PATTERN
+ls | grep -v ".exe"	ls | Where-Object {$_.Name -notlike "*.exe"}
+ls *txt	ls *txt
+cat FILE	get-content FILE
+obtener servicios matching sql	Get-Service *sql*
+create profile	if(!(Test-Path -Path $PROFILE)) { New-Item -Type File -Path $PROFILE -Force }
+bashlike autocomplete with tab	Set-PSReadlineKeyHandler -Key Tab -Function Complete
+enable scripts	Set-ExecutionPolicy RemoteSigned
+alias ej	Set-alias vim "C:/Program Files/Vim/vim.exe"
+obtener impresoras	Get-Printer
+install chocolate (as admin)	iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+print FILE	Get-Content FILE | Out-Printer
+get only file names	ls | select Name

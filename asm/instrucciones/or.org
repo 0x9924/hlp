@@ -1,0 +1,6 @@
+* or
+** op:
+dest <- dest OR src
+** flags afectadas:
+   cleared: OF, CF
+   result: SF, ZF, PF

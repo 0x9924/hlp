@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# este es un script para generar los txt en base a los html
+# de https://github.com/rjeschke/x86.renejeschke.de
+
+getname () {
+    cat ${1} \
+        | sed 's/<h1>x86.*//g' \
+        | xmllint.exe  --xpath '//body/div/h1/text()' - \
+        | sed 's/\//_/g'
+}
+
+name=$(getname ${1})
+echo "w3m -dump ${1} > $name.txt"
+w3m -dump ${1} > $name.txt

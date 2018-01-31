@@ -1,0 +1,74 @@
+1er cuatrimestre de 2017
+
+Algoritmos y Estructuras de Datos II - DC - UBA
+
+Trabajo práctico 2: aed2::map
+aed2::map
+Normativa
+Límite de entrega: 2 de Junio de 2017 a las 16:00 hs.
+Normas de entrega: Ver “Información sobre la cursada” en el sitio Web de la materia.
+(https://www.dc.uba.ar/materias/aed2/2017/1c/)
+
+Introducción
+El objetivo del trabajo práctico es implementar y documentar nuestra versión de un diccionario que emule al
+diccionario std::map del estándar C++03. Para ello, se pide completar el archivo map.h que se adjunta como
+parte del enunciado. La implementación debe respetar las complejidades solicitadas y no debe perder memoria.
+A continuación se describen los lineamientos para resolver el TP.
+
+Documentación
+El archivo map.h sirve a la vez como implementación y documentación. Dentro de este archivo hay una
+serie de comentarios C++ que sirven para generar una pagina web con la documentación. Para ello, es necesario
+compilar el archivo fuente usando el sistema doxygen.1 En dicha página web de documentación, además del
+presente enunciado, se encuentra:
+Una descripción general de cómo se usa el módulo aed2::map (o std::map).
+Una explicación detallada de la estructura de datos a utilizar, con las justificaciones para la elección de
+dicha estructura.
+Una explicación de cómo especificar formalmente las distintas funciones que utilizan punteros.
+Algunas consideraciones a la hora de especificar las funciones que usan iteradores.
+Una descripción de cómo especificar los aspectos de aliasing de un módulo.
+La interfaz del módulo aed2::map, incluyendo todas las funciones públicas, escrita en lenguaje coloquial.
+Algunas funciones completamente especificadas e implementadas que sirven como ejemplo de lo que se
+espera del TP.
+Para generar la documentación, alcanza con ejecutar doxygen map.h, teniendo en cuenta que el archivo
+map.doxyfile debe estar en la misma carpeta que map.h. Se recomienda el uso de Eclipse, junto con plugins
+para google test, valgrind y doxygen.
+
+Lineamientos para la resolución
+Estructura de representación. La estructura de representación se encuentra en la parte privada de la clase
+y no se puede modificar. En pocas palabras, implementa un red-black tree con un nodo cabecera.
+Implementación. Se deben implementar todas las funciones públicas. No se pueden agregar funciones en la
+parte pública, aunque sí se pueden agregar en la parte privada (recomendado).
+Eficiencia. Las funciones implementadas deben satisfacer las cotas de complejidad requeridas. Asimismo, todas
+las funciones privadas que se agreguen deben indicar cuál es su complejidad.
+Aspectos no funcionales. Además de la corrección y la eficiencia, se va a evaluar la claridad del código, la
+reutilización de funciones, y la no perdida de memoria.
+Especificación formal. Se debe completar la especificación de todas las funciones publicas, escribiendo las pre
+y postcondiciones en lenguaje formal. Asimismo, se deben especificar los invariantes de representación y
+las funciones de abstracción de todas las estructuras (diccionario e iteradores), tanto en lenguaje coloquial
+como formal.
+Especificación coloquial. No es necesario especificar las funciones privadas en términos formales. Sí se deben
+documentar en lenguaje coloquial, describiendo los parámetros requeridos y el valor de retorno, siguiendo
+el mismo estilo que se usa para las funciones públicas.
+1 En
+
+ubuntu o debian, instalar el paquete doxygen
+
+1/2
+
+1er cuatrimestre de 2017
+
+Algoritmos y Estructuras de Datos II - DC - UBA
+
+Axiomas y proposiciones auxiliares. Las funciones auxiliares del lenguaje de especificación, deben axiomatizarse en la sección correspondiente dentro del archivo map.h. Se sugiere agregar la función dentro
+del archivo map.doxyfile a fin de poder generar links desde las otras secciones del documento. Ver los
+ejemplos incluidos en el archivo.
+Testing. Una semana antes de la entrega se van a publicar la batería de test que se van a utilizar para testear
+el módulo. Pasar o no pasar los casos de test es irrelevante para la aprobación del TP, que será corregido
+por uno de los docentes.
+Forma de entrega. El trabajo práctico se entrega enviando un mail a algo2.dc+tp2@gmail.com. El mail debe
+incluir a los integrantes del grupo y debe tener adjunto el archivo map.h. El bot de la materia podría
+llegar a responder si se pasan los casos de test o no; tener en cuenta el punto anterior.
+
+2/2
+
+

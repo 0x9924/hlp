@@ -1,0 +1,20 @@
+|---------------------+----------------------------------------------------|
+| fecha               | \date                                              |
+| autor               | \author                                            |
+| título              | \title{...} [...] \maketitle                       |
+| iniciar sección     | \section{...}                                      |
+| Parte               | \part[nombre1]{nombre2}                            |
+| Capítulo            | \chapter[nombre1]{nombre2}                         |
+| Sección             | \section[nombre1]{nombre2}                         |
+| Subsección          | \subsection[nombre1]{nombre2}                      |
+| Subsubsección       | \subsubsection[nombre1]{nombre2}                   |
+| Parágrafo           | \paragraph[nombre1]{nombre2}                       |
+| Subparágrafo        | \subparagraph[nombre1]{nombre2}                    |
+| signo de pregunta   | ?`                                                 |
+| cross referencing   | \label{MiLabel} THEN \ref{MiLabel}                 |
+| newcommand          | \newcommand{cmd}[args]{def}                        |
+| renewcommand        | \renewcommand{cmd}[args]{def}                      |
+| instalar            | texlive, texlive-lang-spanish, texlive-latex-extra |
+| source code listing | \lstinputlisting                                   |
+| fond sizes          | 10pt, 11pt, 12pt                                   |
+

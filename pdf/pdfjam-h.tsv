@@ -1,0 +1,6 @@
+# -*- mode:csv -*-
+# http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam
+juntar 4 paginas en una	pdfjam --batch --nup 2x2 --suffix 2up --landscape --outfile . FILENAME.pdf 
+mergear pdfs	FILE1.pdf '-' FILE2.pdf --outfile --landscape OUT.pdf
+split pdf	pdfjam FILE.pdf '1,2' --outfile OUT.pdf
+trim pdf	pdfjam --trim '1cm 1cm 1cm 1cm' --clip true FILE.pdf --outfile OUT.pdf

@@ -1,0 +1,20 @@
+\documentclass[11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+%\usepackage{fourier}
+%\usepackage{array} 
+\usepackage{booktabs,amsmath}      
+\begin{document}
+
+\newcommand{\tvi}{\vrule height 17pt depth15pt width 0pt} 
+
+\newcolumntype{x}[1]{>{\hfil$\displaystyle} p{#1} <{$\hfil}} 
+
+\begin{tabular}{x{4cm} x{4cm} }\\
+  \text{\bfseries{Fonctions}}   & \text{\bfseries{ Primitives}}       \\
+  \midrule
+  \tvi   \frac{ 1} {1+x^2 }     & \mathrm{ arctan}\,(x)+C             \\
+  \midrule 
+  \tvi   \frac{1}{\sqrt{x^2+h}} & \log\bigl(x+\sqrt{x^2+h}\,\bigr)+C  \\
+\end{tabular}
+
+\end{document} 

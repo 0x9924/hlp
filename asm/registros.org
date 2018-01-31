@@ -1,0 +1,4 @@
+* rax
++ al usar /syscall/, el número de syscall se pasa en rax
+* rbx
++ primer parametro en funcion c

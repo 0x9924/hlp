@@ -1,0 +1,6 @@
+* description
+from https://ec.haxx.se/http-cookies.html
+
+"HTTP cookies are key/value pairs that a client stores on the behalf of a
+server. They are sent back in subsequent requests according to heuristics
+to allow clients to keep state between requests."

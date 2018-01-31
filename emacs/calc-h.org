@@ -1,0 +1,15 @@
+| emacs calc                       |                   |
+|----------------------------------+-------------------|
+| store in var                     | s s VARNAME       |
+| store in var removing from stack | s t VARNAME       |
+| read var value                   | s r VARNAME       |
+| reset calc                       | C-x * 0           |
+| apply formula to entire column   | C-cc # in #+TBLFM |
+| hexadecimal form                 | d6                |
+| decimal form                     | d0                |
+| type hex number                  | \#NUMBER          |
+| pop                              | C-d               |
+| B                                | log               |
+| L                                | ln                |
+| E                                | exp               |
+

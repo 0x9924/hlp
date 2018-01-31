@@ -1,0 +1,9 @@
+# -*- mode:csv -*-
+-	regular file
+d	directory
+l	link
+c	special file
+s	socket
+p	named pipe
+b	block device
+

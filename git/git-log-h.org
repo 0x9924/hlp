@@ -1,0 +1,4 @@
+|----------------------------------+----------------------------------|
+| get commit history               | git log                          |
+| find commit where file was added | git log --diff-filter=A FILENAME |
+|                                  |                                  |

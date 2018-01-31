@@ -1,0 +1,5 @@
+|--------------+------------------------------------------------------------------------|
+| pdf to ...   | pdftocairo -...  FILE.pdf                                              |
+| pdf to png   | convert -density 200 -colorspace Gray $1 -geometry 1000 ${1/.pdf/.png} |
+| rotar imagen | mogrify -rotate '90>' FILE.jpeg                                        |
+| crop png     | convert in.png -crop AnchoxAlto+X+Y out.png                            |

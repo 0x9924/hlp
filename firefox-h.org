@@ -1,0 +1,30 @@
+* register protocol
+http://kb.mozillazine.org/Register_protocol
+** All Firefox versions
+
+(Requires certain Gnome libraries to be installed)
+
+    In a terminal, type: 
+
+gconftool-2 -s /desktop/gnome/url-handlers/foo/command '/path/to/app %s' --type String
+gconftool-2 -s /desktop/gnome/url-handlers/foo/enabled --type Boolean true
+
+Replace foo on both lines with the protocol you want to register and /path/to/app with the path to the application you want to run.
+
+** Firefox 3.5 and above
+
+(Works without installed Gnome libraries)
+
+    Type about:config into the Location Bar (address bar) and press Enter.
+    Right-click -> New -> Boolean -> Name: network.protocol-handler.expose.foo -> Value -> false (Replace foo with the protocol you're specifying)
+    Next time you click a link of protocol-type foo you will be asked which application to open it with. 
+
+
+** Firefox versions up to 3.0
+
+(Works without installed Gnome libraries)
+
+    Type about:config into the Location Bar (address bar) and press Enter.
+    Right-click -> New -> Boolean -> Name: network.protocol-handler.external.foo -> Value -> true (Replace foo with the protocol you're specifying)
+    Right-click -> New -> String -> Name: network.protocol-handler.app.foo -> Value -> /path/to/app (Replace foo with the protocol you're specifying and /path/to/app with the path to the application you want to run)
+    Ensure network.protocol-handler.expose-all is set to true. 

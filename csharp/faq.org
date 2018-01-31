@@ -1,0 +1,17 @@
+* faqs
+** static class
+A static class is like a non-static class, but it cannot be instantiated.
+(You cannot create a variable of the class type). So, you acces it's 
+members by using the class name itself.
+
+Ejemplo:
+
+#+BEGIN_SRC csharp
+  MiClase.UnMetodoPublico();
+#+END_SRC
+
+Static classes are usefull for sets of methods that operete only on it's
+parameters, whitout using internal instance fields.
+** ?? (null-coalescing operator)
+It return the left-hand operand if it is non-null,
+otherwise it returns the right hand operand.

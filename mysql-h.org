@@ -1,0 +1,3 @@
+| query colum names | SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS`    |
+| "                 | WHERE `TABLE_SCHEMA`='dbname' AND `TABLE_NAME`='tablename'; |
+

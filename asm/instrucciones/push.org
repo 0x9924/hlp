@@ -1,0 +1,31 @@
+* push
+1. decrementa el Stack Pointer
+2. escribe SRC en la Stack
+
+** Operación
+
+SP <- SP - RegisterSize
+Memory[SS:SP] <- SRC
+
+** Flags afected
+Ninguna
+
+* pusha/pushad - Push all general purpose registers
+
+| pusha  | push ax, cx, dx, bx original sp, bp, si y di         |
+| pushad | push eax, ecx, edx, ebx original esp, ebp, esi y edi |
+
+** operation
+
+temp <- sp
+push ax
+push cx
+push dx
+push bx
+push temp
+push bp
+push si
+push di
+
+* pushf/pushfd/pushfdq - Push EFLAGS Register onto the Stack
+

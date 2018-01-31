@@ -1,0 +1,8 @@
+http://cran.cnr.berkeley.edu/bin/linux/ubuntu/
+
+Agregar a /etc/apt/sources.list
+deb https://cloud.r-project.org/bin/linux/ubuntu/ version/
+
+o
+deb http://mirror.fcaglp.unlp.edu.ar/CRAN/bin/linux/ubuntu/ version/
+deb http://nbcgib.uesc.br/mirrors/cran/bin/linux/ubuntu/ version/

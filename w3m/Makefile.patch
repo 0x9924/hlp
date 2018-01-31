@@ -1,0 +1,11 @@
+--- Makefile.bkp	2017-10-12 19:01:25.468639408 -0300
++++ Makefile	2017-10-12 18:53:05.396572964 -0300
+@@ -44,7 +44,7 @@
+ 	-DRC_DIR=\"$(RC_DIR)\" \
+         -DLOCALEDIR=\"$(localedir)\"
+ LDFLAGS =  -L/home/nsanmartin/lib
+-LIBS = -lm
++LIBS = -lm -lX11
+ GC_LIBS = -L/home/nsanmartin/lib -lgc
+ EXT_LIBS = -L. -lindep  $(GC_LIBS)
+ W3M_LIBS =  -L./libwc -lwc -lssl -lcrypto   -lssl -lcrypto -ltermcap

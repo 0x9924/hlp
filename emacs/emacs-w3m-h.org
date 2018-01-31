@@ -1,0 +1,4 @@
+|---------------------------+------------------------------------------|
+| abrir una nueva "pestaña" | w3m-copy-buffer                          |
+| rep                       | https://github.com/ecbrown/emacs-w3m.git |
+|                           |                                          |

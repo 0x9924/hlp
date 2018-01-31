@@ -1,0 +1,7 @@
+|-------------------------+---------------------------|
+| list network devices    | nmcli d[ev]               |
+| list wifi disponibles   | nmcli d[ev] w[ifi] list   |
+| list connections        | nmcli c[onnection]        |
+| connect to wifi by ssis | nmcli d[ev] w[ifi] c SSID |
+
+

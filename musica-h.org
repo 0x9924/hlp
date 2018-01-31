@@ -1,0 +1,4 @@
+|------------+---------------|
+| rip cd     | cdparanoia -B |
+| wav to mp3 | lame FILENAME |
+|            |               |

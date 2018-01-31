@@ -1,0 +1,12 @@
+| gnus                                 |                                                                                  |
+|--------------------------------------+----------------------------------------------------------------------------------|
+| arhive mail                          | B backspace                                                                      |
+| attach file                          | C-c C-a                                                                          |
+| compose new mail                     | C-x m                                                                            |
+| download (save) atachment            | o # over the atachment                                                           |
+| encrypt mail body                    | M-x epa-mail-encrypt                                                             |
+| read gmail                           | ^ RET a nnimap RET imap.gmail.com                                                |
+| reply mail                           | r                                                                                |
+| send mail                            | C-c C-c                                                                          |
+| info mail gnus-summary-toggle-header | t                                                                                |
+| multiple gmail accounts              | ## -> http://www.cataclysmicmutation.com/2010/11/multiple-gmail-accounts-in-gnus |

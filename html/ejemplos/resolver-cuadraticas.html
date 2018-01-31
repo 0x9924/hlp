@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Eciaciones cuadráticas</title>
+  </head><body><form>
+      Ingrese coeficientes de ax<sup>2</sup> + bx + c = 0:
+      <br />
+      a = <input type="text" value="1" name="a" />
+      (no debe ser 0)<br />
+      b = <input type="text" value="2" name="b" /><br />
+      c = <input type="text" value="-8" name="c" /><br />
+      r_1 = <input type="text" value="0" name="r1"
+		   onclick="var A=parseFloat(a.value),B=parseFloat(b.value),
+			    C=parseFloat(c.value);
+			    r1.value=(-B+Math.sqrt(B*B-4.*A*C))/2./A; " />
+      (click en el textarea)<br />
+      r_2 = <input type="text"
+		   value="0" name="r2" onclick="var
+						A=parseFloat(a.value),B=parseFloat(b.value),
+						C=parseFloat(c.value);
+						r2.value=(-B-Math.sqrt(B*B-4.*A*C))/2./A; " /> (clicken el textarea)<br />
+    </form>
+  </body>
+</html>

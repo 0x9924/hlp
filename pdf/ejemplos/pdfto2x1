@@ -1,0 +1,27 @@
+#! /bin/bash
+
+
+usage() { echo "usage: pdfto2x1 -f FILENAME 1 1 1 1";exit 1; }
+FILE=""
+while getopts f:h SWITCH ; do
+    case $SWITCH in
+        f) FILE=$OPTARG
+           ;;
+        h) usage
+           ;;
+    esac
+done
+shift $((OPTIND-1))
+
+echo filename: "${FILE}" 
+if [[ -z "${FILE}" ]]; then echo "You must provide a filename"; usage;fi
+
+OUTFILE="tmp-trim.pdf"
+echo archivo: $FILE
+echo pdfjam --trim \'${1}cm ${2}cm ${3}cm ${4}cm\' ${FILE}
+
+pdfjam --trim "${1}cm ${2}cm ${3}cm ${4}cm" --outfile  ${OUTFILE} ${FILE} \
+    && echo pdfjam  --batch --nup 2x1 --suffix 2up --landscape  ${OUTFILE}\
+    && pdfjam  --batch --nup 2x1 --suffix 2up --landscape  ${OUTFILE}
+
+

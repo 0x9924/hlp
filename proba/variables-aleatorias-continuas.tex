@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\newtheorem{mydef}{Definici\'on}
+\newtheorem{prop}{Proposici\'on}
+
+\begin{document}
+
+\title{Variables aleatorias discretas}
+\author{nsm}
+
+\maketitle
+
+
+\begin{mydef}[v.a. cont\'inua]
+  Una v.a. es \emph{cont\'inua} si existe una funci\'on
+  \[
+    f:\mathbb{R} \to \mathbb{R}_{\geq 0}
+  \]
+  tal que
+  \[
+    P(X \in A) = \int_A f(x) \ dx , \quad \forall A \subseteq \mathbb{R}
+  \]
+\end{mydef}
+
+\begin{mydef}[Funci\'on de densidad]
+  Dicha funci\'in se denomina \emph{funci\'on de densidad}.x
+\end{mydef}
+
+\paragraph{Propiedades de la funci\'on de densidad}
+  Para que una funci\'on \(f(x)\) sea una funci\'on de densidad
+  debe cumplir:
+\begin{enumerate}
+    \item \( f(x) \geq 0, \quad \forall x \)
+    \item \( \int_{-\infty}^{+\infty} f(x) \ dx = 1\)
+\end{enumerate}
+\
+
+\begin{mydef}[Funci\'on de distribuci\'on acumulada]
+  La \emph{distribuci\'on} de una v.a. cont\'inua \(X\) con
+  densidad \(f(x)\) se define para todo $x \in \mathbb{R}$ como:
+
+  \[
+    F_X(x) = \int_{-\infty}^{+\infty} f(t) \ dt
+  \]
+\end{mydef}
+
+\paragraph{Propiedades de la funci\'on de distribuci\'on acumulada.}
+Sea \(X\) una v.a. conr\'inua, entonces:
+\begin{enumerate}
+    \item $ \forall x \in \mathbb{R} \quad F_X(x) \in [0,1] $
+    \item $ \forall x, y \quad x < y \implies F_X(x) \leq F_X(y) $
+    \item \(F_X(x)\) es cont\'inua en todo punto.
+    \item \(\lim_{x\to +\infty} F_X(x)=1 \land
+      \lim_{x\to -\infty} F_X(x) = 0\)
+\end{enumerate}
+\
+
+\begin{prop}
+  Sean $a, b \in \mathbb{R} $ y $a \leq b$ entonces
+  \[
+    P(a \leq X \leq b) = F_X(b) - F_X(a)
+  \]
+\end{prop}
+
+\begin{mydef}[Esperanza]
+\end{mydef}
+
+\paragraph{Propiedades de la Esperanza}
+\begin{enumerate}
+\item \(E[aX+b] \quad = \quad aE[X]+b \)
+\item Si $P(X = c) = 1$, entonces $E[X]= c$
+\end{enumerate}
+
+\begin{mydef}[Varianza]
+  Sea $X$ una v.a. discreta con f.p.p. $p_X(x)$ y esperanza $\mu_X$.
+  La \emph{varianza}  de $X$ es:
+  \[
+    V[X] = E[(X - \mu_X)^2]
+  \]
+\end{mydef}
+
+\begin{prop}[F\'ormula para la varianza]
+  \[
+    V[X] = E[X^2] - E[X]^2
+  \]
+\end{prop}
+\end{document}

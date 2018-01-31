@@ -1,0 +1,49 @@
+* Convencion C
+** 64 bits
+*** Garantías
+Una función debe, para cumplir con la convención C:
++ Preservar RBX, R12, R14 y R15
++ Retornar el resultado en RAX o XMM0
++ No romper la pila
+
+La *pila* está alineada a 8 bytes. Antes de llamar a una función de C,
+tiene que tener la pila alineada a 16 bytes.
+*** Pasaje de parámetros
+Los parámetros se pasan (de izquierda a derecha) por los registros:
++ Si es *entero* o *puntero* se pasan respetando el orden usando:
+  RDI, RSI, RDX, RCX, R8, R9
++ Si es de tipo *float* se pasan en los XMMs
+Si no hay más registros disponibles se usa la pila, pero deberán
+quedar ordenados desde la dirección más baja a la más alta (se pushean
+de derecha a izquierda).
+
+** Microsoft x86
+https://en.wikipedia.org/wiki/X86_calling_conventions
+*** Garantias
+The Microsoft x64 calling convention[14][15] is followed on Windows
+and pre-boot UEFI (for long mode on x86-64). It uses registers RCX,
+RDX, R8, R9 for the first four integer or pointer arguments (in that
+order), and XMM0, XMM1, XMM2, XMM3 are used for floating point
+arguments. 
+Additional arguments are pushed onto the stack (right to left)
+*** return values
+Integer return values (similar to x86) are returned in RAX if 64 bits
+or less. Floating point return values are returned in XMM0. Parameters
+less than 64 bits long are not zero extended; the high bits are not
+zeroed.
+
+
+** 32 bits
+*** Garantías
+Una función debe, para cumplir con la convención C:
++ Preservar EBX, ESI y EDI
++ Retornar el resultado en EAX
++ No romper la pila
+
+La *pila* está alineada a 4 bytes. Antes de llamar a una función de C,
+tiene que tener la pila alineada a 4 bytes.
+
+*** Pasaje de parámetros
+Los parámetros se pasan por la pila.
+Deben quedar ordenados desde la posición más baja a la más alta. (Se
+pushean de izquierda a derecha??).

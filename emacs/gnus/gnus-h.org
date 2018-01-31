@@ -1,0 +1,7 @@
+| gnus                                 |                                                                                  |
+|--------------------------------------+----------------------------------------------------------------------------------|
+| add server (server buffer)           | a                                                                                |
+| delete from server buffer            | k                                                                                |
+| mostrar todos los grupos (carpetas)  | C-u 5 M-x gnus-group-list-all-groups                                             |
+| read newsgroup                       | a nntp news.gmane.org #in server buffer                                          |
+

@@ -1,0 +1,9 @@
+varios ejemplos
+http://gimphelp.org/
+
+helo wordl example:
+http://www.seul.org/~grumbel/gimp/script-fu/script-fu-tut.html
+
+
+so question:
+http://stackoverflow.com/questions/10818857/canvas-resize-and-changing-resolution-in-script-fu-gimp-on-indexed-image

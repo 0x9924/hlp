@@ -1,0 +1,4 @@
+* DEC
+** flags
+No afecta CF
+Si afecta OF, SF, ZF, AF y PF

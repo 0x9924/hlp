@@ -1,0 +1,18 @@
+| gnus                                 |                                                                                  |
+|--------------------------------------+----------------------------------------------------------------------------------|
+| arhive mail / delete article         | B backspace                                                                      |
+| fetch news                           | g                                                                                |
+| go to parent article                 | A r ^                                                                            |
+| mark article as read                 | d                                                                                |
+| mark articles in buffer              | M P a                                                                            |
+| mark articles in region              | M P r                                                                            |
+| mark with process mark               | #                                                                                |
+| setting marks                        | ## -> http://www.gnu.org/software/emacs/manual/html_node/gnus/Setting-Marks.html |
+| sort summary by author               | (gnus-summary-sort-by-author)                                                    |
+| sort summary by author key           | C-c C-s C-n                                                                      |
+| unmark with process mark             | M-#                                                                              |
+| previous thread                      | T p                                                                              |
+| info mail gnus-summary-toggle-header | t                                                                                |
+| Show older (younger) articles        | / t                                                                              |
+
+

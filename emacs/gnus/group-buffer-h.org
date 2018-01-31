@@ -1,0 +1,4 @@
+|----------------------------+---------|
+| mark group as read         | c       |
+| read all messages in group | C-u RET |
+

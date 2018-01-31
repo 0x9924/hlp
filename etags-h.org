@@ -1,0 +1,3 @@
+|----------------------------------+---------------------------------------------------------------|
+| create etags table               | $ find .  -> grep  ".*\.\(h\ \OR cc\)$" \ xargs etags -f TAGS |
+| create TAG file (exuberant tags) | ctags -e -R .                                                 |

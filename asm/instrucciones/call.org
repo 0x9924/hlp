@@ -1,0 +1,37 @@
+* Call
+| call r/m |
+
+** Descripción
+Hay 4 tipos de call
+*** Near call: an intra-segment call.
+*** Far call: an inter-segment call.
+*** Inter provilege-level far call: 
+A call to a procedure in a segment at a different privilege level than
+current program.
+*** Task switch: a call to procedure in diferent task
+
+** Operación
+
+CASE near relative call :
+    tempDEST <- signExtend(DEST)
+    tempIP <- IP + tempDEST
+    Push (IP)
+    RIP <- tempRIP
+
+CASE near absolute call :
+    Push (IP)
+    IP <- DEST
+
+CASE far call and Protected Mode :
+    CASE no conforming :
+        (*operand 32 or 64 bits*)
+        Push (CS)
+        Push (IP)
+        CS <- DEST(CodeSegmentSelector)
+        CS(RPL) <- CPL
+        IP <- DEST(Offset)
+
+    CASE task state segment :
+        // ...
+
+        

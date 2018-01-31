@@ -1,0 +1,7 @@
+|-----------------+------------------|
+| git status      | M-x magit-status |
+| stage (git add) | s                |
+| commit          | c c              |
+| switch branch   | b b              |
+| push            | P u              |
+| pull            | F u              |

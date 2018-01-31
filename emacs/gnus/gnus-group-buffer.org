@@ -1,0 +1,1 @@
+read mail-list archive	B nntp RET news.gmane.org RET

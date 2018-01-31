@@ -1,0 +1,919 @@
+\documentclass[12pt,a4paper]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{varioref}
+\usepackage{currfile}
+\title{}
+\makeatother
+\usepackage{mdframed}
+\usepackage[left=1.6cm,right=1.6cm,top=1.6cm,bottom=1.6cm]{geometry}
+\newtheorem{theorem}{Teorema}[section]
+%\newmdtheoremenv{theorem}{Teorema}[section]
+\newtheorem{ejs}{Ejemplo}[section]
+\newtheorem{mydef}{Definici\'on}[section]
+\newtheorem{corol}{Corolario}[theorem]
+%\newmdtheoremenv{mydef}{Definici\'on}[section]
+
+\newcommand{\limi}[4]{
+  \lim_{#1 \to #2} #3 = #4
+}
+
+\begin{document}
+\maketitle
+\begin{center}\currfilename\end{center}
+\section{Logaritmos}
+\begin{table}[!htbp]
+\caption{Propiedades de los logaritmos}
+\begin{align*}
+\hline\\[0.5em]
+&\log_a{a} &&=&& 1 &\\[0.7em]
+&\log_a{1} &&=&& 0 &\\[0.7em]
+&\log_a{pq} &&=&& \log_a{p} + \log_a{q}&\\[0.7em]
+&\log_a{\frac{p}{q}} &&=&& \log_a{p} - \log_a{q} &\\[0.7em]
+&\log_a{p^q} &&=&& q\log_a{p} &\\[0.7em]
+&\log_a{p} &&=&& \frac{\log_b{p}}{\log_b{a}}&\\[0.7em]
+&a^{\log_a{x}} &&=&& x &\\[0.7em]
+&log_a{a^x} &&=&& x &\\[0.7em]
+%&log_a{a^x} &&=&& x &\\[0.7em]
+\hline \\
+\end{align*}
+\label{tab:loga}
+\end{table}
+
+Adem\'as, \(p \neq q \quad \to  \log_a(p) \neq \log_a(q)\) \\
+
+Veamos la siguiente \emph{regla del cambio de base}:
+
+Para todo \( x \)  se cumple \( x^{\log_x(M)} = M \). De esto se sigue
+\( a^{\log_a(b)} = b \) y \( b^{\log_b(M)} = M \). Sustituyendo
+obtenemos: \(M= \big(a^{\log_a b}\big)^{\log_b M} \) que es lo mismo que
+\(M= a^{(\log_a b)(\log_b M)}   \). Con lo cual, tenemos:
+
+
+\[a^{\log_a M} = a^{(\log_a b)(\log_b M)} \]
+
+De los cual se sigue \( \log_a M = (\log_a b)(\log_b M) \)  y
+finalmente:
+
+\begin{equation}
+\log_b(M) = \frac{\log_a(M)}{\log_a(b)}
+\end{equation}
+
+\section{Funciones cuadr\'aticas}
+
+El eje de simetr\'ia de una funcione cuadr\'atica est\'a dado por:
+\[
+-\frac{b}{2a} = x_v\]
+
+El valor extremo est\'a dado por \(f(-\frac{b}{2a})\), es decir:
+\[
+\frac{4ac-b^2}{4a} = y_v \]
+
+El v\'ertice de la par\'abola est\'a dado por el punto \( (x_v, y_v)
+\)
+
+Los ceros de la funci\'on se obtienen con la f\'ormula:
+\[
+\frac{-b \pm \sqrt{b^2-4ac}}{2a} \]
+
+Se cumple la ecuaci\'on:
+\[
+ax^2+bx+c = a(x-x_v)^2+\frac{4ac-b2}{4a} \]
+\section{L\'imites}
+
+\subsection{Definiciones}
+\begin{minipage}{16cm}
+\textbf{Definici\'on de l\'imite:}
+\vspace{1em}
+\hrule
+\vspace{1em}
+\[\lim_{x \to a}f(x) = l \qquad \emph{ significa:}\]
+\[
+(\forall \epsilon > 0) \ (\exists \delta > 0) \ \forall x \quad : \quad 0<|x-a|<
+\delta
+\qquad  \to \qquad  |f(x) - l| < \epsilon
+\]
+
+\vspace{0.5em}
+\[ \lim_{x \to a}f(x) = \infty \qquad \emph{ significa:}\]
+\[ (\forall M > 0 \ \exists \delta > 0 \ \forall x \neq a) \qquad   0<|x-a| < \delta  \to  |f(x)| >
+M
+ \]
+\vspace{0.5em}
+
+\[ \lim_{x \to \infty}f(x) = l \emph{ significa:} \]
+\[ (\forall \epsilon > 0 \ \exists N \ \forall x) \qquad  x > |N|  \to
+ |f(x) - l| < \epsilon
+ \]
+\hrule
+\vspace{1em}
+\end{minipage}
+
+\begin{table}[!htbp]
+\caption{Reglas sobre l\'imites}
+\begin{align*}
+\hline \\
+& \lim_{x \to a}k & = \qquad & k &\\[0.7em]
+& \lim_{x \to a}x & = \qquad & a &\\[0.7em]
+& \lim_{x \to a}\Big(k + f(x)\Big) & =  \qquad & k + \lim f(x)& \\[0.7em]
+& \lim_{x \to a}\Big(f(x) + g(x)\Big) & =   \qquad  &   \lim_{x \to a}f(x) + \lim_{x  \to a} g(x)&  \\[0.7em]
+& \lim_{x \to a}\Big(f(x) g(x)\Big) & =   \qquad  &   \lim_{x \to a}f(x) \lim_{x  \to a} g(x)&  \\[0.7em]
+& \lim_{x \to a}\Big(\frac{f(x)}{g(x)}\Big) & =   \qquad
+&\frac{\lim_{x \to a}f(x) }{\lim_{x  \to a} g(x)} &
+\text{\footnotesize \(\lim_{x \to a}g(x) \neq 0\)} \\[0.7em]
+& \lim_{x \to a}f(x)^{g(x)} & =   \qquad  & \lim_{x \to
+                                            a}f(x)^{\lim_{x \to a}g(x)} &\\[0.7em]
+& \lim_{x \to a} \log{(f(x))} & =   \qquad  & \log{\big(\lim_{x \to a} f(x)\big)} &\\[0.7em]
+& \lim_{x \to a}\Big(f(x)\Big)^n & = \qquad & \Big(\lim_{x \to  a}f(x)\Big)^n & \\[0.7em]
+& \sqrt[n]{\lim_{x \to a}f(x)} & = \qquad & \lim_{x \to
+                                            a}\sqrt[n]{f(x)} & \\[1.1em]
+& \lim_{x \to c}\frac{f(x)}{g(x)} & = \qquad
+                             & \lim_{x \to  c} \frac{f'(x)}{g'(x)}  \qquad
+                                 & \text{\footnotesize \(f \) y \( g\)   \ cont\'inuas,
+                                   definidas en \([a,b]\).}\\[-0.4cm]
+&&&& \text{\footnotesize \( c \in (a,b) ,  f(a) = f(a) = 0\) o bien
+     \(\pm \infty\)}\\[-0.4em]
+&&&& \text{\footnotesize (L'Hopital)}\\[1em]
+& \text{ Si  } b_n, c_n \to L
+                  & \quad \text{ luego } &  a_n \to L
+                             &  \text{ (Sandwich) } &\\
+& \text{ y } b_n \leq a_n \leq c_n&&&\\[0.7em]
+\hline\\
+\end{align*}
+\label{tab:limReg}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Algunos ejemplos de l\'imites}
+{\renewcommand{\arraystretch}{1.5}
+%\vspace{1.5cm}
+\begin{align*}
+\hline \\
+& \lim_{x \to 0}\frac{1}{x} && =     && \infty  &\\[1em]
+& \lim_{x \to \infty}\Big(\frac{x+1}{x}\Big)&&=  && 1 &\\[1em]
+&\lim_{x \to 1}\Big(\frac{x^n-1}{x-1}\Big)
+                            && =  && n & \text{por L'Hopital}\\[1em]
+&\lim_{x \to \infty}\Big(\frac{x^n-1}{x-1}\Big)&& =  && \infty
+                                                &\text{por L'Hopital}\\[1em]
+&\lim_{x \to \infty}\Big(\frac{x}{1+x}\Big)^x&& =   && e^{-1} &\\[1em]
+&\lim_{x \to 0} \sen{x} &&= && 0 &\\[1em]
+&\lim_{x \to 0} \cos{x} &&= && 1 &\\[1em]
+& \lim_{x \to 0}\frac{\sen{x}}{x}
+                            && = && 1 & \text{por L'Hopital}\\[1em]
+& \lim_{x \to 0}\frac{\sen{4x}}{x} && = && 4 & \text{por L'Hopital}\\[1em]
+& \lim_{x \to 0}\frac{\sen{ax}}{ax} && = && 1 , \ a \neq 0 & \
+                                                             \text{por
+                                                             L'Hopital} \\[1em]
+& \lim_{x \to a}\frac{\sen{x-a}}{x-a} && = && 1  &\\[1em]
+& \limi{x}{0}{\ln(x) &&}{ && - \infty} &\\[1em]
+& \limi{x}{\infty}{\ln(x) &&}{ && \infty} &\\[1em]
+& \limi{x}{0}{\frac{\ln(x)}{x} &&}{ && 0} &\ \text{por L'Hopital}\\[1em]
+\vspace{1cm}\\
+\hline \\
+\end{align*}
+}
+\label{tab:limReg}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{ALgunas funciones que no tienden a ning\'un l\'imite}
+{\renewcommand{\arraystretch}{1.5}
+%\vspace{1.5cm}
+\begin{align*}
+\hline \\
+&\lim_{x \to \infty}\sen{x} &\\[0.7em]
+&\lim_{x \to 0}\sen{\frac{1}{x}} &\\
+\vspace{1cm}\\
+\hline \\
+\end{align*}
+}
+\label{tab:nolim}
+\end{table}
+
+\vspace{.5cm}
+
+\subsection{Regla de L'Hopital}
+\begin{minipage}{16cm}
+Sean \(f(x)\) y \(g(x)\) tales que son
+\begin{itemize}
+\item funciones cont\'inuas en un entorno de \(a\),
+\item con derivadas en dicho entorno,
+\item siendo \(g(x) \neq 0\) cerca de \(a\),
+\item con \[\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0,\]
+\item y existe el \[\lim_{x \to a} \frac{f'(x)}{g'(x)},\]
+\end{itemize}
+entonces: \[\lim_{x \to a} \frac{f(x)}{g(x)}= \lim_{x \to a} \frac{f'(x)}{g'(x)}\]
+\end{minipage}
+\section{Continuidad}
+
+\begin{mydef}[Continuidad de una funci\'on]
+
+Una funci\'on \( f(x) \) es \emph{cont\'inua} en el punto \( x_0 \) si
+est\'a definida en la vecindad de dicho punto y
+
+\[ \lim_{\Delta x \to 0} \Delta y = 0 \]
+
+O, lo que es igual:
+
+
+\[ \lim_{\Delta x \to 0} (f(x_0+\Delta x)-f(x_0)) = 0 \]
+
+Y como \( \lim(a+b) = \lim a + \lim b \), tambi\'en podemos escribir:
+
+\[ \lim_{\Delta x \to 0} f(x_0+ \Delta x) = f(x_0) \]
+
+Lo que es igual a:
+
+\[ \lim_{x \to x_0} f(x) = f(x_0) \]
+\end{mydef}
+
+\section{Derivadas}
+
+\begin{mydef}[Derivable en \( a \) ]
+La funci\'on \( f \) es \emph{derivable en} \( a \)  si existe
+\[ \lim_{h \to 0} \frac{f(a+h)-f(a)}{d} \]
+\end{mydef}
+
+\begin{theorem}
+Si f es derivable en a, entonces es cont\'inua en \( a \) .
+\end{theorem}
+
+\begin{theorem}
+\[ (\log_a(x))' = \frac{1}{x}\log_a(e) \]
+\end{theorem}
+\begin{proof}
+
+\[ \frac{\log_a(x+h)-\log_a(x)}{h} \quad = \quad
+\log_a\Big(\frac{x+h}{x}\Big)\Big(\frac{1}{h}\Big) \quad = \quad
+\log_a\Big(1+\frac{h}{x}\Big)\Big(\frac{1}{h}\Big) \quad = \quad
+ \]
+
+
+\[  \quad = \quad \log_a\Big(1+\frac{h}{x}\Big)\Big(\frac{x}{h}\Big)\Big(\frac{1}{x}\Big)
+ \quad = \quad
+ \Big(\frac{1}{x}\Big)\log_a\Big(1+\frac{h}{x}\Big)^{\Big(\frac{x}{h}\Big)} \]
+
+Y como \( \lim_{h \to 0}(1+\frac{h}{x})^{\frac{x}{h}}  =  e \) se
+deduce entones que
+
+
+\[ \Big(\log_a(x)\Big)' \quad = \quad \frac{1}{x} \log_a(e) \]
+\end{proof}
+Corolario: \( \Big( ln(x) \Big)' = \frac{1}{x}.  \)
+\begin{proof}
+\( \ln(e)=1 \)
+\end{proof}
+
+\subsection{Reglas de derivaci\'on}
+
+\begin{theorem}[Regla de la cadena]
+\begin{equation}
+\Big(f(g(x))\Big)' = f'(g(x))g'(x)
+\end{equation}
+\end{theorem}
+
+\begin{theorem}
+\[(y^u)'=y^u\Big(u'\ln y+\frac{uy'}{y}\Big)\]
+\end{theorem}
+
+\begin{theorem}[Teorema de la func\'on inversa]
+\[(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}\]
+\end{theorem}
+
+\begin{table}[!htbp]
+\caption{reglas de derivaci\'on.  \( x \) reprsenta un variable, \( a \) y \( k \)
+constantes y \( u \) y \( v \) funciones de \( x \) .
+}
+\begin{align*}
+&  f &  &  f'  & \\[0.75em]
+ \hline  \\
+& k & & 0 & \\[0.75em]
+&  kx &  &  k   & \\[0.75em]
+& u+v & & u' + v' &\\[0.75em]
+&  ku &  &   ku'   & \\[0.75em]
+&  vu &  &  v'u + vu'   & \\[0.75em]
+&  x^k & &  ku^{k-1}   & \\[0.75em]
+&  u^k  & &  ku^{k-1}u'   & \\[0.75em]
+&  a^x  & &  a^x\ln(a)   & \\[0.75em]
+&  a^u  & &  a^u(\ln a)u'   & \\[0.75em]
+&  u^v  & &  vu^{v-1}u'+u^v(\ln u)v'   & \\[0.75em]
+&  y^v  & &  y^v(v'\ln y + \frac{vy'}{y})   & \\[0.75em]
+&  log_a(x) & &   \Big(\frac{1}{x}\Big)\log_a(e)  & \\[0.75em]
+&  log_a(u) & &   \Big(\frac{1}{u}\Big)\log_a(e)u'  & \\[0.75em]
+&  \frac{k}{x} & &  -\frac{k}{x^2}  & \\[0.75em]
+&  \frac{k}{u}  & &  -\frac{ku'}{u^2}   & \\[0.75em]
+&  \frac{v}{u}  & &  \frac{v'u-vu'}{u^2}  & \\[0.75em]
+& \sen(x) & & \cos(x) & \\[0.75em]
+& \cos(x) & & -\sen(x) & \\[0.75em]
+& \tg(x) & & \frac{1}{\cos^2(x)}  & \\[0.75em]
+& \cotg(x) & & \frac{1}{\sen^2(x)}  & \\[0.75em]
+& (f^{-1})'(x) & & \frac{1}{f'(f^{-1}(x))} &\\[0.75em]
+\hline \\
+\end{align*}
+\label{tab:derReg}
+\end{table}
+
+%~\vref{tab:derReg}
+%\vpageref[above table ][table ]{tab:derReg}
+
+\subsection{Algunos teoremas sobre el comportamiento de las funciones}
+
+\begin{mydef}[Punto m\'aximo]
+Sea \( f \) una funci\'on y \( A \) un conjunto contenido en su
+dominio. Un punto  \( x \) de \( A \) se dice que es \textbf{punto
+  m\'aximo} de \( f \) sobre \( A \)  si
+\begin{equation}
+(\forall y \in A) \quad f(x) \geq f(y)
+\end{equation}
+\end{mydef}
+
+\begin{mydef}[Valor m\'aximo]
+El n\'umero \( f(x) \) recibe el nombre de \textbf{valor m\'aximo} de
+\( f \) sobre \( A \) si \( x \) es su punto m\'aximo.
+\end{mydef}
+
+\begin{theorem}
+Sea \( f \) una funci\'on definida sobre \( (a,b) \). Luego, si \( x \)
+es un m\'aximo (para \( f \)) sobre \( (a,b) \), y \( f \) es
+derivable en \( x \) , entonces \( f'(x)=0 \) .
+\end{theorem}
+Es importante notar aqu\'i que el rec\'iroco de este teorema no es
+cierto. Es posible que se d\'e \( f'(x)=0 \) sin que por ello \( x \)
+sea un punto m\'aximo. Este es el caso de \( f'(0) \) cuando \(
+f(x)=x^3 \) .
+
+\begin{mydef}[Punto m\'aximo (m\'inimo) local]
+Un punto \( x \) es un m\'aximo local de la funci\'on \( f \) sobre \(
+A \) si existe alg\'un \( \delta \) tal que \( x \) es punto m\'aximo
+sobre el conjunto \( A \cap (x-\delta, x+\delta) \) .
+\end{mydef}
+
+\begin{theorem}
+Si \( f \) est\'a definida sobre \( (a,b) \), tiene un m\'aximo local
+en \( x \) y es derivable en \( x \) , entonces \( f'(x)=0 \) .
+\end{theorem}
+
+\begin{mydef}[Punto singular y valor singular]
+Se llama \textbf{punto singular} de una funci\'on \( f \)  a todo
+n\'umero \( x \) tal que
+\[ f'(x)=0 \]
+El n\'umero \( f(x) \) recibe entonces el nombre de \textbf{valor singular}.
+\end{mydef}
+
+% teorema de Rolle
+\begin{theorem}[Teorema de Rolle] Si \( f \) es cont\'inua sobre \( [a,b] \) y derivable sobre \( (a,b) \) , y \( f(a) = f(b) \) , entonces existe un n\'umero \( x \)  en \( (a,b) \) tal que \( f'(x)=0 \) .
+\end{theorem}
+\begin{proof}
+Como, seg\'un suponemos, \( f(x) \) es cont\'inua en \( [a,b] \), debe tener un m\'aximo \( M \) y un m\'inimo \( m \)  en \( [a,b] \) .
+Si \( M = m  \), entonces \( f(x)  \) es constante y cualquier \( x \in (a,b) \) sirve.
+Supongamos que \( M > 0 \geq m \)  (\(  m > M \) no podr\'ia ser) y que \( f(c)=M \). Observemos que, seg\'un lo supuesto, debe ser \( c \neq a \)  y \( c \neq b \) .
+Tenemos entonces que, para todo \( \Delta x \) , \( f(c+\Delta x) - f(c) \leq 0 \) ya sea \( \Delta x > 0 \) como \( \Delta x < 0 \) . Se sigue:
+{\renewcommand{\arraystretch}{1.8} %<- modify value to suit your needs
+\begin{align*}
+&\frac{f(c+\Delta x)-f(c)}{\Delta x} \leq 0 & cuando  & \quad \Delta x > 0 & \\
+&\frac{f(c+\Delta x)-f(c)}{\Delta x} \geq 0 & cuando & \quad \Delta x < 0 & \\
+\end{align*}}
+Como, seg\'un la hip\'otesis la derivada \( f'(c) \) existe, obtenemos, pasando al l\'imite las f\'ormulas anteriores que \(  f'(c) \leq 0 \)  o \(  f'(c) \geq 0 \) seg\'un sea \( \Delta x \) positiva o negativa respectivamente. De esto se sigue que
+\[ f'(c)=0 \]
+\end{proof}
+\begin{theorem}[Teorema del valor medio]
+Si \( f \) es cont\'inua en \( [a,b] \) y derivable en \( (a,b) \) , entonces existe un n\'umero \( x \)  en \( (a,b) \) tal que
+\[ f'(x)=\frac{f(b)-f(a)}{b-a} \]
+\end{theorem}
+\begin{proof}
+Definamos:
+\[ h(x) \quad = \quad f(x) - \Big(\frac{f(b)-f(a)}{b-a} \Big)(x-a) \]
+F\'acilmente se obtiene \( h(a)=f(a) \) y tambi\'en
+\[ h(b) = f(b) - \Big(\frac{f(b)-f(a)}{b-a}\Big)(b-a) = f(a) \]
+As\'i, dado que \( f(a)=f(b) \) podemos aplicar el teorema de Rolle seg\'un el cual existe alg\'un \( x \) tal que
+\( h'(x)=0 \). Derivamos \( h(x) \) y obtenemos
+
+\[ \Bigg( f(x) - \Big(\frac{f(b)-f(a)}{b-a} \Big)(x-a) \Bigg)' = f'(x) - \Big(\frac{f(b)-f(a)}{b-a} \Big) \]
+
+De manera que \( 0 = f'(x) - \Big(\frac{f(b)-f(a)}{b-a} \Big)  \) .
+\end{proof}
+
+\begin{corol}
+Si se define \(f\) sobre un intervalo y \(f'(x)=0\) para todo \(x\)
+del itnervalo, entonces \(f\) es constante en el intervalo.
+\end{corol}
+\begin{proof}
+Sean \(a\) y \(b\) dos puntos distintos del inervalo. Luego debe haber alg\'un
+\(x\) tal que
+
+\[f'(x)=\frac{f(b)-f(a)}{b-a}\]
+
+Pero como \(f'(x)=0\) para todo \(x\) del intervalo:
+
+\[0=\frac{f(b)-f(a)}{b-a}\]
+
+Luego \(f(b) = f(a) \).
+
+\end{proof}
+\begin{corol}
+Si \(f\) y \(g\) esta\'an definidas en el mismo intervalo y \(f'(x) = g'(x)\)
+para todo \(x\) del intervalo, entonces existe alg\'un \(c\) tal que \(f + g =
+c \).
+\end{corol}
+
+\begin{corol}
+Si \(f'(x) > 0\) para todo \(x\) de un intervalo, entonces \(f\) es
+creciente en el intervalo; si \(f'(x) < 0\) para todo \(x\) de un intervalo, entonces \(f\) es
+decreciente en el intervalo.
+\end{corol}
+\begin{theorem}[Teorema de Cauchy]
+Sean \(f(x)\) y \(g(x)\) funciones cont\'inuas y derivables dentrode
+\([a,b]\). Si \(g'(x)\) no adquiere el valor cero en \([a,b]\), luego:
+
+\[ \exists c \in (a,b) \quad . \quad \frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(c)}{g'(c)} \]
+\end{theorem}
+
+
+\begin{tabular}{|c|c|}
+  \hline
+  & \\
+  Fermat & Sea \(f\) definida en \((a,b)\) con extremo local en \(x_0
+           \in (a,b)\)\\[0.5em]
+  & Si \(f\) es derivable en \(x_0\) entonces \(f'(x_0) = 0\)\\[2.5em]
+  Rolle &
+          Si \( f \) es cont\'inua sobre \( [a,b] \) y derivable sobre
+          \( (a,b) \) , y \( f(a) = f(b) \), entonces  \\[0.5em]
+        & \(\exists  x \in (a,b) \quad f'(x)=0 \) . \\[2.5em]
+
+  Valor medio &
+                Si \( f \) es cont\'inua en \( [a,b] \) y derivable en
+                \( (a,b) \) , entonces\\[0.5em]
+  (Lagrange) & \(\exists  x \in (a,b) \quad f'(x)=\frac{f(b)-f(a)}{b-a} \) \\[2.5em]
+  Cauchy
+        & Sean \(f(x)\) y \(g(x)\) funciones cont\'inuas y derivables
+          dentro de \([a,b]\).\\[0.5em]
+ &  Si \(g'(x)\) no adquiere el valor cero en \([a,b]\), luego:\\[0.5em]
+ & \( \exists c \in (a,b) \quad . \quad \frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(c)}{g'(c)} \) \\[1em]
+\hline
+\end{tabular}
+\subsection{M\'aximos y m\'inimos}
+Para localizar el m\'aximo y el m\'inimo de \( f \) en \( [a,b] \)  deben considerarse
+tres clases de puntos:
+
+\begin{enumerate}
+\item Los puntos singulares de \( f \) en \( [a,b] \) .
+\item Los extremos \( a \) y \( b \) .
+\item Los puntos de \( x \)  de \( [a,b] \)  tales que \( f \) no es
+  derivable en \( x \) .
+\end{enumerate}
+
+Si \( x \) es un punto m\'aximo, entonces evidentemente debe ser
+alguno de estos tres casos.
+
+Si existen s\'olo unos pocos puntos singulares, y s\'olo unos pocos en
+los cuales no es derivable, el procedimiento para hallar los puntos
+m\'aximos es: se halla \( f(x) \) para cada \( x \) que satisface \(
+f'(x)=0 \) , y \( f(x) \) para cada \( x \) en que \( f \) no es
+derivable y, finalmente, \( f(a) \) y \( f(b) \). El mayor de estos
+valores ser\'a el m\'aximo y el menor ser\'a el m\'inimo.
+
+\begin{ejs}{Hallar m\'aximo y \'inimo de \( f(x)=x^3-x \)}
+(falta el ejemplo)
+\end{ejs}
+
+\begin{theorem}[Criterio de la segunda derivada]
+Sea \(f'(a)=0\) y que la segunda derivada de \(f\) existe en un
+intervalo abierto que contiene a \(a\). Luego, \\
+\\
+Si \( f ''(x) < 0 \) , entonces \( f \)  tiene un máximo relativo en \( (x, f(x)) \) .\\
+Si \( f ''(x) > 0 \) , entonces \( f \)  tiene un mínimo relativo en \( (x, f(x)) \) .\\
+Si \( f ''(x) = 0 \) , entonces el criterio falla. Esto es, f quizás
+tenga un máximo relativo en \( x \) , un mínimo relativo en \( (x,
+f(x)) \)  o ninguno de los dos. Tomar como ejemplo la función \( f(x)
+= x^3 \) . En tales casos, se puede utilizar el criterio de la primera
+derivada o el criterio de la tercera derivada.\\
+\\
+Nota: la derivada segunda es la derivada de la derivada, o sea:
+
+\[ f''(x)= (f'(x))' \]
+
+\end{theorem}
+\begin{table}[!htbp]
+\caption{M\'inimos y m\'aximos}
+\begin{center}
+\begin{tabular}{ l c}
+\hline & \\[0.25em]
+\(f(c)\)  es valor m\'inimo o m\'aximo &   \(f'(x) = 0 \) \\[1em]
+\( f'(x) > 0 \quad \forall x \in \mathbf{I} \) &  \(f\)  es creciente en \textbf{I}\\[1em]
+\( f'(x) < 0 \quad \forall x \in \mathbf{I} \) &  \(f\) es decreciente
+en \textbf{I}\\[1em]
+\(f\) es c\'oncava en \(\mathbf{I}\) & \(f'\) es creciente
+\(\mathbf{I}\)\\[1em]
+\(f\) es convexa en \(\mathbf{I}\) & \(f'\) es decreciente
+\(\mathbf{I}\)\\[1em]
+\(f''(x) > 0  \quad \forall x \in \mathbf{I}\) & \(f\) es c\'oncava en
+\textbf{I}\\[1em]
+\(f''(x) < 0  \quad \forall x \in \mathbf{I}\) & \(f\) es convexa en
+\textbf{I}\\[1em]
+\hline\\
+\end{tabular}
+\end{center}
+\label{tab:minmax}
+\end{table}
+\vspace{0.5em}
+
+\begin{minipage}{16cm}
+\begin{center}
+\emph{Criterio de la primera derivada:}
+\end{center}
+\hrule
+\vspace{1cm}
+Si \(f'(x)>0 \ \forall \ x \in (a,c)\) y \(f'(x)<0 \ \forall \ x \in
+(c,b)\) \textbf{entonces} \(f(c)\) es valor m\'aximo relativo \\[1em]
+Si \(f'(x)<0 \ \forall \ x \in (a,c)\) y \(f'(x)>0 \ \forall \ x \in
+(c,b)\) \textbf{entonces} \(f(c)\) es valor m\'inimo relativo \\[1em]
+Si \(f'(x)\) tiene el mismo valor a ambos lados de \(c\) entocnes \(c\) no es
+valor extremo\\
+\vspace{0.5em}
+\end{minipage}
+\vspace{2em}
+
+\begin{minipage}{16cm}
+\begin{center}
+\emph{Criterio de la segunda derivada:}
+\end{center}
+\hrule
+\vspace{1em}
+Sup\'ongase que \(f'\) y \(f''\) existen en todo punto de un intervalo
+abierto (a,b) que contiene a \(c\) y sup\'ongase que \(f'(c)=0\).\\[1em]
+\(f''(c) < 0\) \textbf{entonces} \(f(c)\) es m\'aximo relativo. \\[1em]
+\(f''(c) > 0\) \textbf{entonces} \(f(c)\) es m\'inimo relativo .\\[1em]
+\end{minipage}
+\begin{theorem}[Teorema de Bolzano]
+Sea \(f\) cont\'inua en \([a,b]\), con \(f(a) < 0\) (o \(f(a) > 0\)) y
+\(f(a) > 0 \) (o \(f(a) < 0\)). Luego
+\[\exists x \in (a,b) : f(x) = 0\]
+\end{theorem}
+\begin{theorem}[Teorema de los valores intermedios]
+Sea \(f\) cont\'inua en \([a,b]\) Luego:
+\[\forall u : f(a) < u < f(b) \quad \to \quad \exists x  f(x) = u \]
+\end{theorem}
+Como corolario tenemos que:
+\[\not \exists x f(x) = 0 \quad \to \quad  \neg (f(a) < 0 < f(b))\]
+Con lo cual, si tenemos que en un intervalo una función no se anula y
+toma alg\'un valor positivo, entonces es positiva en ese intervalo.
+
+\subsection{Construcci\'on de curvas}
+Para la construcci\'on de un gr\'afico de una funci\'on nos valdremos
+esencialmente de la siguiente informaci\'on:
+\begin{itemize}
+  \item Dominio \(f\).
+  \item Intervalos de crecimiento y decrecimiento, y extremos locales.
+  \item Intervalos de concavidad positiva y negativa, y puntos de inflexi\'on.
+  \item Existencia de as\'intotas verticales, horizontales y obl\'icuas.
+\end{itemize}
+\section{Sucesiones}
+
+\begin{mydef}{Sucesi\'on infinita}
+
+Una sucesi\'on infinita de n\'umeros reales es una funci\'on cuyo
+dominio es \(\mathbb{N}\).
+\end{mydef}
+\begin{mydef}{Convergencia}
+
+Una sucesi\'on \( \{ a_n \} \) \emph{converge hacia \( l \)} si  \(
+(\forall \epsilon > 0) (\exists N) (\forall n)  :   n > N
+\quad \to \quad | a_n - l | < \epsilon \) y se escribe
+\[ \lim_{n \to \infty} a_n = l \]
+\end{mydef}
+\begin{theorem}
+Sea \( f \) una funci\'on definida en un intervalo abierto que contiene
+\( c \), excepto quiz\'a en \( c \) mismo, con:
+\[ \lim_{x \to c} f(x) = l \]
+
+Y sup\'ongase adem\'as que \( \{ a_n \} \) es una sucesi\'on tal que:
+\begin{enumerate}
+\item cada \( a_n \) pertenece al dominio de \( f \),
+\item cada \( a_n \neq c \),
+\item \(\lim_{n \to \infty} a_n = c\)
+\end{enumerate}
+
+Entonces, la sucesi\'on \( \{ f(a_n) \} \) satisface
+\[ \lim_{n \to \infty} f(a_n) = l\]
+Rec\'iprocamente, si esto se cumple para toda sucesi\'on \( \{ a_n \}
+\) que datisface las condiciones anteriores, entonces se cumple que
+\[ \lim_{x \to c} f(x) = l \]
+\end{theorem}
+
+
+En los ejemplos siguientes \( N \) se refiere al \( N \) de la definici\'on
+de l\'imite.
+
+\begin{ejs}{La sucesi\'on \( \{ x^n \} \), con \( |x|< 1 \) converge a
+  cero}
+
+Escribimos \( |x| = \frac{1}{(1+p)} \) (para \( p \) conveniente).
+
+Y para N tomamos cualquiera que cumpla con \( \frac{1}{pN} < \epsilon \).
+
+\end{ejs}
+\hspace{1mm}
+\begin{ejs}{La sucesi\'on \( \sum_{k=0}^n x^n \) llamada \emph{serie
+geom\'etrica} converge a \( \frac{1}{1-x} \)  }
+
+
+\end{ejs}
+\hspace{1mm}
+\begin{ejs}[La sucesi\'on \( \{(-1)^n\} \) no es convergente.]
+
+
+\end{ejs}
+\hspace{1mm}
+\begin{ejs}[\(\lim_{n \to \infty} \{ ^n\sqrt{a}  \} = 1\)]
+\begin{proof}
+Tenemos que encontrar un \( n \) que cumpla con \( |a^{(\frac{1}{n})}|
+- 1 < \epsilon \). Se dan dos casos.
+\begin{flalign*}
+&\textbf{Caso 1}  \qquad 0<a<1  & \\
+\end{flalign*}
+En este caso \( a^{\frac{1}{n}} < 1 \) para todo \( n \in \mathbf{N}
+\). Por lo tanto, tenemos que \( |a^{\frac{1}{n}}-1| = 1 - a^{\frac{1}{n}} \).
+De este modo, si \( 1 - a^{\frac{1}{n}} < \epsilon \) tenemos \( a^{\frac{1}{n}} > 1 - \epsilon \),
+y por esto: \[ n > \frac{1 }{\log_a(1-\epsilon)} \]
+
+\begin{flalign*}
+&\textbf{Caso 2} \qquad a > 1  & \\
+\end{flalign*}
+
+Aqu\'i tenemos que \( | a^{1/n}-1| = a^{1/n}-1 \).
+Tenemos que hallar un \( n \) tal que
+\( a^{\frac{1}{n}}-1 < \epsilon \), es decir que
+\( a^{\frac{1}{n}} < \epsilon +1\).
+
+
+Lo cual se sigue de \( \log_a(\epsilon+1)=1/x \) , ya que:
+\( n > x \to 1/n < 1/x \)
+y \( 1/n < 1/x \to a^{1/n} < a^{1/x} \).
+
+Como, por definici\'on de logaritmo \( a^{1/n} = \epsilon+1 \quad \equiv \quad \log_a(\epsilon+1) = \frac{1}{n} \)
+y hemos supuesto la parte derecha, tenemos:
+\[ a^{1/n} < \epsilon+1 \]
+\end{proof}
+\end{ejs}
+\subsection{Criterio de Cauchy o de la ra\'iz en\'esima}
+Si \[ \lim_{n \to \infty} \sqrt[n]{a_n} = L \] entonces vale que: \\
+\[ 0 \leq L \leq 1  \quad \rightarrow \quad \lim_{n \to \infty} a_n =
+0 \]
+
+\[ L \geq 1  \quad \rightarrow \quad \lim_{n \to \infty} a_n =
+\infty \]
+
+\[ L = 1  \quad \rightarrow \quad \text{Indeterminado} \]
+
+
+\subsection{Criterio de D'Alembert o del cociente}
+Si \[ \lim_{n \to \infty} |\frac{a_{n + 1}}{a_n}| = L \] entonces vale que: \\
+\[ 0 \leq L \leq 1  \quad \rightarrow \quad \lim_{n \to \infty} a_n =
+0 \]
+
+\[ L \geq 1  \quad \rightarrow \quad \lim_{n \to \infty} a_n =
+\infty \]
+
+\[ L = 1  \quad \rightarrow \quad \text{Indeterminado} \]
+
+\subsection{Algunos l\'imites}
+
+\begin{table}[!htbp]
+\caption{Ejemplos de l\'imites de sucesiones}
+{\renewcommand{\arraystretch}{1.4} %<- modify value to suit your needs
+\begin{flalign*}
+& \textbf{Sucesi\'on} &  \textbf{L\'imite} &  & \\
+\hline \\
+& \lim_{n \to \infty}\frac{1}{n} & 0 & \\
+& \lim_{n \to \infty} a^n & 0 & ,\quad (|a| < 1)  \\
+& \lim_{n \to \infty} \frac{n}{n+1} & 1 & & \\
+& \lim_{n \to \infty} \frac{n+3}{n^3+4} & 0 & & \\
+& \lim_{n \to \infty} \frac{n!}{n^n} & 0 & & \\
+& \lim_{n \to \infty} \sqrt{n+1} - \sqrt{n} & 0 & & \\
+& \lim_{n \to \infty} \sqrt[8]{n^2+1}-\sqrt[4]{n+1} & 0 & & \\
+& \lim_{n \to \infty} \sqrt[n]{a} & 1 & , a > 1 & \\
+& \lim_{n \to \infty} \sqrt[n]{n} & 1 & & \\
+& \lim_{n \to \infty} \sqrt[n]{n^2+n} & 1 & & \\
+& \lim_{n \to \infty} \sqrt[n]{a^n + b^n} & \max(a,b) & & \\
+& \sum_{k=0}^n x^n & \frac{1}{1-x} & \quad (\emph{Serie geometrica})
+\\
+& \lim_{n \to \infty}\Big(1+\frac{1}{n}\Big)^n & e & & \\
+& \lim_{n \to \infty}\Big(1+\frac{z}{n}\Big)^{n} & e^z & & \\
+& \lim_{n \to \infty}\Big(1+\frac{1}{zn}\Big)^{n} & e^{\frac{1}{z}} & & \\
+& \lim_{n \to \infty}\Big(1-\frac{z}{n}\Big)^{n} & e^{-z} & & \\
+\vspace{1cm}\\
+\hline \\
+\end{flalign*}
+}
+\label{tab:sucEjs}
+\end{table}
+\section{Series}
+\begin{theorem}
+Si una serie \(s_n\) converge y \(u_n\) se obtiene en base a ella
+suprimiendo un n\'umero finito de t\'erminos en ella, luego \(u_n\) converge.
+\end{theorem}
+\begin{theorem}
+Si \(s_n\) converge y suma \(s\)  y \(u_n\) se obtiene multimplicando cada t\'ermino
+de \(s\) por \(c\), luego \(u_n\) converge en y suma \(cs\).
+\end{theorem}
+\begin{theorem}
+Si las series \(s_n\) y \(u_n\) convergen y suman \(s\) y \(u\)
+respectivamente, tambi\'en lo hace la serie que resulta de sumar cada
+en\'esimo t\'ermino de una con el de la otra y su suma es \(s + u\).
+\end{theorem}
+\vspace{1em}
+
+\begin{theorem}[Condici\'on necesaria para la convergencia]
+Si una serie converge, entonce si en'esimo t\'ermino tiende a cero
+cuando \(n \to 0\).
+\end{theorem}
+\begin{corol}
+Si el en\'esimo t\'ermino de una serie \(s_n\) no tiende a cero,
+entonces \(s_n\) no converge.
+\end{corol}
+\vspace{1em}
+\begin{theorem}
+Si \(u_n \leq v_n, \forall n\) y \(v_n\) converge, luego \(u_n\) converge.
+\end{theorem}
+\begin{theorem}
+Si \(u_n \geq v_n,  \forall n\) y \(v_n\) diverge, luego \(u_n\) diverge.
+\end{theorem}
+\begin{theorem}[Criterio de D'Alembert]
+Sea \(s_1\) una serie con t\'erminos positivos. Y sea \[
+\limi{n}{\infty}{\frac{u_{n+1}}{u_n}}{l} \]
+entonces:\\
+1) La serie converge cuando \(l < 1\)\\
+2) La serie diverge cuando \(l > 1\)\\
+(Cuando \(l = 1\) pueden darse los dos casos).
+\end{theorem}
+\begin{theorem}[Criterio de Cauchy]
+Sea \(s_1\) una serie con t\'erminos positivos. Y sea \[
+\limi{n}{\infty}{\sqrt[n]{u_n}}{l}\]
+entonces:\\
+1) La serie converge cuando \(l < 1\)\\
+2) La serie diverge cuando \(l > 1\)\\
+(Cuando \(l = 1\) pueden darse los dos casos).
+\end{theorem}
+\begin{theorem}[Criterio Integral]
+Sea \(s_n\) una serie tal que
+\[
+s_1 \geq s_2 \geq s_3 ...
+\]
+Y sea \(f \) una funci\'on cont\'inua tal que \( f(i) = s_i \). Entonces se
+cumple:\\
+1) Si \( \int_1^{\infty} f(x) \ dx \) converge, tambi\'en converge \(s_n\)
+\end{theorem}
+
+
+\section{As\'intotas}
+
+\subsection{As\'intota Vertical}
+Se llama As\'intota Vertical de una rama de una curva \( y = f(x) \) , a la recta paralela al eje \( y \)  que hace que la rama de dicha funci\'on tienda a infinito. Si existe alguno de estos dos l\'imites:
+
+\[ \lim_{x \to a^-} f(x) = \pm\infty \]
+
+
+\[ \lim_{x \to a^+} f(x) = \pm\infty \]
+
+a la recta \( x = a \)  se la denomina \emph{as\'intota vertical}.
+
+Ejemplos: logaritmo neperiano, tangente
+\subsection{As\'intota horizontal}
+Se llama As\'intota Horizontal de una rama de una curva \(  y = f(x) \)  a la recta paralela al eje \( x \)  que hace que la rama de dicha funci\'on tienda a infinito. Si existe el l\'imite:
+\[  \lim_{x \to \pm\infty} f(x)= a , \]
+siendo \( a \)  un valor finito, la recta \( y = a \)  es una as\'intota horizontal.
+
+Ejemplos: funci\'on exponencial, tangente hiperb\'olica
+\subsection{As\'intota oblicua}
+La recta de ecuaci\'on \( y = mx + b ,  (m \neq 0) \)  ser\'a una as\'intota oblicua si:
+\[ \lim_{x \to \pm\infty}[f(x)-(mx+b)] = 0. \]
+
+Los valores de \( m \)  y de \( b \)  se calculan con las f\'ormulas:
+
+\[ m = \lim_{x \to \pm\infty}{f(x) \over x} \]
+
+\[ b = \lim_{x \to \pm\infty}{f(x)-mx} \]
+
+\section{Integrales}
+
+
+\begin{mydef}[Partici\'on]
+Sea \( a < b \) . Recibe el nombre de \emph{partici\'on} del itnervalo
+\( [a,b] \) toda colecci\'on finita de puntos \( [a,b] \), de los
+cuales uno es \( a \) y el otro es \( b \) .
+\end{mydef}
+
+\begin{mydef}[Suma Inferior (Superior)]
+Sea \( f \) acotada sobre \( [a,b] \) y \( P = {t_0, \dots, t_n} \)
+una partici\'on de \( [a,b] \) . Sea adem\'as
+\[ m_i= \inf\{f(x):t_{i-1} \leq x \leq t_i\} \]
+\[ M_i= \sup\{f(x):t_{i-1} \leq x \leq t_i\} \]
+Luego, se llama \emph{suma inferior} de \( f \)  para \( P \) a :
+\[ L(f,P)= \sum_{i=1}^n m_i(t_i-t_{i-1}) \]
+Y se llama \emph{suma superio} de \( f \)  para \( P \) a :
+\[ U(f,P)= \sum_{i=1}^n M_i(t_i-t_{i-1}) \]
+\end{mydef}
+
+\begin{theorem}
+Sean \( P_1 \) y \( P_2 \) particiones de \( [a,b] \). Entonces:
+\[ L(f,P_1)\leq U(f,P_2) \]
+\end{theorem}
+
+\begin{mydef}[Integrable]
+Una funci\'on \( f \) acotada sobre \( [a,b] \)  es \emph{integrable}
+sobre \( [a,b] \) si
+
+\[
+\sup\{L(f,P): P \text{ es partici\'on de } [a,b] \} =
+\inf\{U(f,P) : P \text{ es partici\'on de } [a,b] \}
+\]
+\end{mydef}
+
+\begin{theorem}
+Si \( f \) est\'a acotada sobre \( [a,b] \) , entonces \( f \) es
+integrable sobre \( [a,b] \) si y s\'olo si para todo \( \epsilon >0
+\) existe una partici\'on \( P \) de \( [a,b] \) tal que
+
+\[U(f,P)-L(f,P) < \epsilon  \]
+\end{theorem}
+
+\begin{theorem}
+Si \(f\) es cont\'inua en \([a,b]\), entonces \(f\) es integrable en \([a,b]\).
+\end{theorem}
+
+\begin{theorem}
+Sea \( f \) integrable sobre \( [a,b] \) y
+\[ \forall x \in [a,b] : m \leq f(X) \leq M \]
+
+Luego
+\[ m(b-a) \leq \int_a^b f \leq M(b-a) \]
+\end{theorem}
+
+\begin{theorem}
+Se \( f \) es integrable sobre \( [a,b] \)  y \( F \) est\'a definida
+sobre \( [a,b] \) por
+\[ F(x) = \int_a^x f \]
+entonces \( F \) es cont\'inua sobre \( [a,b] \)
+
+\end{theorem}
+
+\begin{table}[!htbp]
+\caption{Reglas de integrales}
+{\renewcommand{\arraystretch}{1.6} %<- modify value to suit your needs
+\begin{flalign*}
+\hline \\
+& \int_b^a f(x) \ dx & = & &-\int_a^b f(x) \ dx \\
+& \int_a^a f(x) \ dx & = & & 0 \\
+& \int_a^b kf(x) \ dx &  = & & k\int_a^b f(x) \ dx \\
+& \int_a^b f(x)+g(x) \ dx &  = & & \int_a^b f(x) \ dx + \int_a^b g(x)
+\ dx \\
+& \int_a^b f(x) \ dx + \int_b^c f(x) \ dx &  = & & \int_a^c f(x) \ dx
+\\
+\vspace{1cm}\\
+\hline \\
+\end{flalign*}
+}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Tabla de integrales inmediatas}
+{\renewcommand{\arraystretch}{1.9} %<- modify value to suit your needs
+\begin{flalign*}
+\hline\\
+& \int a \ dx && ax &\\
+& \int x^n \ dx && \frac{x^{n+1}}{n+1} \qquad , n \neq 1 & \\
+& \int a^x \ dx && \frac{a^x}{\ln(a)} &\\
+& \int \frac{1}{x} \ dx \quad  = \quad \int \frac{dx}{x} && \ln(x) &\\
+& \int \frac{dx}{2\sqrt{x}}  && \sqrt{x} &\\
+& \int e^x \ dx && e^x &\\
+& \int \sen(x) \ dx && -\cos(x) &\\
+& \int \cos(x) \ dx && \sen(x) &\\
+\vspace{1cm}\\
+\hline \\
+\end{flalign*}
+}
+\end{table}
+\section{Agregar:}
+\subsection{F\'ormula de Taylor}
+
+Teorema: si \(a_k\) son los coeficientes de un polinomio,
+\[
+P_n, a, f = \sum_{k=0}^n (0)^k
+\]
+
+(buscar Spivak)
+
+\[
+P_n, a, f = \sum_{k=0}^n (x - a)^k
+\]
+Donde:
+\[
+a_k = \frac{f^{(k)}(a)}{k!}
+\]
+
+\end{document}
