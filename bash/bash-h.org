@@ -32,4 +32,5 @@
 | w3m, yank to clipboard: set browser to                           | sh -c 'echo "$0" -> xsel -b'                              |
 | sort by column N    sort -kN                                     |                                                           |
 | formatear usb   sudo mkdosfs /dev/DISKANDPARTITION -s 16 -F 32". |                                                           |
+| copiar contenido de carpeta/directorio en otra                   | cp -R from/. to/                                          |
 

@@ -1,12 +1,3 @@
 hlp
 
-En este repositorio se reúnen algunos recordatorios sobre comandos y
-breves resúmenes para cuando uno no se acuerda como era. Entre los mismos
-pueden encontrarse numerosos errores involuntarios, así que no habría 
-que fiarse plenamente de lo que dice acá sino tenerlo como meras sugerencias.
-
-Los archivos *-h.org (o *-h.tsv) son en general simplementes tablas, separadas por
-tabs, con una descripción del comando y cómo se lo escribe en dos columnas.
-
-Los ejemplos/ están para cuando no se trata de comandos de una sola línea
-sino que son un poco más extensos.
+Varias 'cheat-sheets' de cosas distintas.

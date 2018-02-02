@@ -1,2 +1,4 @@
 * download url
 http://www.agner.org/optimize/objconv.zip
+* obtener nasm asm: 
+objconv -fnasm file.o
