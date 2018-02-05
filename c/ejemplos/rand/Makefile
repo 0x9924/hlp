@@ -8,7 +8,9 @@ test-randbytes: random-bytes.o
 	gcc -O3  ./build/random-bytes.o -o ./build/test-randbytes \
 	./test/test-randbytes.c
 
-
+librandbytes: random-bytes.o
+	ar rcs $(HOME)/lib/$@.a build/random-bytes.o && \
+	cp librandbytes.h $(HOME)/include/
 
 clean:
 	rm ./build/*
