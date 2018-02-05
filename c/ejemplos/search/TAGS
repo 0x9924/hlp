@@ -1,0 +1,13 @@
+
+search-wrd.c,518
+int main (int argc, char ** argv) {main8,75
+unsigned estimated_line_size (FILE * fp, const unsigned sample_lines_to_read)estimated_line_size48,869
+void read_hash(FILE * fp, const unsigned ndefs )read_hash67,1301
+void print_stdin_trad ()print_stdin_trad114,2477
+int es_en_palabra (const char c)es_en_palabra150,3209
+void print_help() {print_help158,3344
+void check_dictionary (char * filename, struct stat * statptr)check_dictionary166,3590
+void check_file (char * filename, FILE *fp)check_file181,3926
+
+search.h,43
+#define MAX_LINE_SIZE MAX_LINE_SIZE8,146

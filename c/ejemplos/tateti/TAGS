@@ -1,0 +1,79 @@
+
+jugada.c,80
+void agregar_jugada (struct lista *j, struct jugador *jdor,agregar_jugada3,21
+
+jugada.h,135
+#define _JUGADA_H_JUGADA_H2,18
+struct jugada {jugada10,118
+  struct jugador *jdor;jdor11,134
+  struct celda *celda;celda12,158
+
+jugador.c,82
+jugador_nuevo (char * nombre, tipo_jdor tipo, unsigned numero,jugador_nuevo4,39
+
+jugador.h,345
+#define _JUGADOR_H_JUGADOR_H2,19
+typedef enum { COMP, PERS }  tipo_jdor;COMP6,79
+typedef enum { COMP, PERS }  tipo_jdor;PERS6,79
+typedef enum { COMP, PERS }  tipo_jdor;tipo_jdor6,79
+struct jugador {jugador8,120
+  char * nombre;nombre9,137
+  char simbolo;simbolo10,154
+  tipo_jdor tipo;tipo11,170
+  unsigned numero;numero12,188
+
+lista.c,121
+struct lista* lista_nueva ()lista_nueva3,20
+void agregar_al_final (struct lista * l, void * d)agregar_al_final10,157
+
+lista.h,262
+#define _LISTA_H_LISTA_H2,17
+struct lista {lista6,56
+    unsigned len;len7,71
+    struct nodo {nodo8,89
+	struct nodo *next;next9,107
+	struct nodo *prev;prev10,127
+	void * data;data11,147
+    } *prim, *ult;prim12,161
+    } *prim, *ult;ult12,161
+
+makefile,32
+OBJECTS = tablero.oOBJECTS1,0
+
+partida.c,251
+partida_nueva (unsigned dim_tablero,partida_nueva7,81
+void mostrar_tablero (struct partida *p)mostrar_tablero25,492
+void jugar (struct partida *p, struct jugador *jdor,jugar32,572
+void mostrar_jugadas (struct partida *p)mostrar_jugadas57,1228
+
+partida.h,370
+#define _PARTIDA_H_PARTIDA_H2,19
+struct partida {partida10,102
+    struct tablero * tab;tab11,119
+    struct jugador ** jdores;jdores12,145
+    unsigned n_jdores;n_jdores13,175
+    struct lista *jdas;jdas14,198
+    struct lista * jaques;jaques15,222
+struct jaque {jaque18,253
+    struct jugador * jdor;jdor19,268
+    struct celda * celda;celda20,295
+
+tablero.c,300
+struct tablero* tablero_nuevo (unsigned dim)tablero_nuevo4,41
+void tablero_mostrar (struct tablero * t)tablero_mostrar19,443
+void tablero_mostrar__ (struct tablero * t)tablero_mostrar__49,1262
+jugada_es_jaque (struct tablero * t, unsigned fila, unsigned col, char simb)jugada_es_jaque63,1568
+
+tablero.h,240
+#define _TABLERO_H_TABLERO_H2,19
+#define C_VACIA C_VACIA9,99
+struct tablero {tablero11,120
+  char ** celdas;celdas12,137
+  unsigned dim;dim13,155
+struct celda {celda16,175
+  unsigned fila;fila17,190
+  unsigned col;col18,207
+
+tateti.c,98
+#define DIMENSION_TABLERO DIMENSION_TABLERO10,144
+int main (int argc, char ** argv)main12,173
