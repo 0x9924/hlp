@@ -1,0 +1,20 @@
+
+print-bytes.c,172
+void print_table_bytes (uint64_t length, uint64_t * tabla) {print_table_bytes4,40
+void print_table_uint64 (uint64_t length, uint64_t * tabla) {print_table_uint6411,204
+
+random-bytes.c,593
+unsigned char * random_bytes (size_t n_bytes) {random_bytes9,186
+uint64_t * bytes_frecuencias_en_rango (uint64_t modulo,bytes_frecuencias_en_rango20,553
+uint64_t * int64_frecuencias_en_rango (uint64_t min, uint64_t max,int64_frecuencias_en_rango32,913
+uint64_t random_long () {random_long43,1301
+uint64_t rand_in_range_urandom (uint64_t range) {rand_in_range_urandom56,1646
+uint64_t * rand_ints_in_range_urandom (uint64_t range, uint64_t count) {rand_ints_in_range_urandom77,2128
+next_random_int64_urandom (FILE * urand, uint64_t *random_array) {next_random_int64_urandom99,2778
+
+print-bytes.h,47
+#define __PRINT_BYTES_H___PRINT_BYTES_H_2,25
+
+random-bytes.h,85
+#define __RAND_BYTES_H___RAND_BYTES_H_2,24
+#define MAX_ALLOWED(MAX_ALLOWED14,535
