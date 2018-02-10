@@ -17,3 +17,4 @@ tmp*
 .temp
 node/ejemplos/rep-ej
 *.stackdump
+build
