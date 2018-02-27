@@ -1,4 +1,4 @@
-CFLAGS = -c -Wall -g -Os
+CFLAGS = -c -Wall -g -O3
 
 all: switch hash
 switch:switch-vs-hash.o
@@ -15,6 +15,13 @@ hash.o:
 
 switch-vs-hash.o:
 	gcc -o build/$@ $(CFLAGS) switch-vs-hash.c
+
+
+hash.asm: hash.o
+	objconv -fnasm build/hash.o
+
+switch.asm: switch.o
+	objconv -fnasm build/switch.o
 
 clean:
 	rm build/*
