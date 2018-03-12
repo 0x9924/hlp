@@ -1,6 +1,8 @@
 ;; defaults
 (require 'auto-complete)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+
+;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+
 
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
