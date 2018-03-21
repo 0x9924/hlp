@@ -1,5 +1,6 @@
-|---------------------------+---------------------------------------------|
-| jump previous buffer      | C-x C-space                                 |
-| toggle-read-only          | C-x C-q                                     |
-| check if no window or not | (if window-system (load-theme 'manoj-dark)) |
-|                           |                                             |
+|--------------------------------+---------------------------------------------|
+| jump previous buffer           | C-x C-space                                 |
+| toggle-read-only               | C-x C-q                                     |
+| check if no window or not      | (if window-system (load-theme 'manoj-dark)) |
+| insert STR at beg of rectangle | M-x string-insert-rectangle                 |
+| rectangle mark                 | C-x SPC                                     |

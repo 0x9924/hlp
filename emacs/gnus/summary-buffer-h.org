@@ -13,6 +13,7 @@
 | unmark with process mark             | M-#                                                                              |
 | previous thread                      | T p                                                                              |
 | info mail gnus-summary-toggle-header | t                                                                                |
+| delete article                       | B DEL                                                                            |
 | Show older (younger) articles        | / t                                                                              |
-
+| pop limit (recover filtered)         | / w                                                                              |
 

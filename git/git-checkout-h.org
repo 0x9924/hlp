@@ -1,0 +1,3 @@
+|---------------------------------+----------------------------------|
+| merge specific file from branch | git checkout --patch branch file |
+
