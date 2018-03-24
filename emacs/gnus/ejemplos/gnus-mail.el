@@ -23,17 +23,7 @@
 
 (defun gnus-gmail () (interactive)
        (setq user-login-name (replace-regexp-in-string
-                              "@.*" "" user-mail-address)
-             gnus-select-method
-             '(nnimap "gmail"
-		      (nnimap-address "imap.gmail.com")
-		      (nnimap-server-port "imaps")
-		      (nnimap-stream ssl))
-
-	     smtpmail-smtp-server "smtp.gmail.com"
-	     smtpmail-smtp-service 587
-	     gnus-ignored-newsgroups
-	     "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
+                              "@.*" "" user-mail-address))
        
 	    (eval (gnus-mail-imap-conf "imap.gmail.com"))
 	    (eval (gnus-mail-smtp-conf "smtp.gmail.com"))
