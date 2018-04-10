@@ -23,6 +23,8 @@
     (gnus)))
 
 (defun gnus-gmail () (interactive)
+       (customize-set-variable 'gnus-always-read-dribble-file
+			       t)
        (setq user-login-name (replace-regexp-in-string
                               "@.*" "" user-mail-address))
        (setq user-full-name user-login-name)
