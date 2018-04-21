@@ -1,4 +1,4 @@
-#+begin_src R :exports both :results graphics :file plot.pdf
+je#+begin_src R :exports both :results graphics :file plot.pdf
 ## Simple quantiles/ECDF, see ecdf() {library(stats)} for a better one:
 plot(x <- sort(rnorm(47)), type = "s", main = "plot(x, type = \"s\")")
 points(x, cex = .5, col = "dark red")

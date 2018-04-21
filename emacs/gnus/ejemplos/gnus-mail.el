@@ -14,7 +14,8 @@
 
 (defun gnus-dc ()
   (interactive)
-  (let ((user-login-name user-mail-address))     
+  (let ((user-login-name user-mail-address))
+    (setq user-full-name user-login-name)
     (eval (gnus-mail-imap-conf "imap.dc.uba.ar"))
     (eval (gnus-mail-smtp-conf "smtp.dc.uba.ar"))
     (setq gnus-message-archive-group
@@ -22,9 +23,12 @@
     (gnus)))
 
 (defun gnus-gmail () (interactive)
+       (customize-set-variable 'gnus-always-read-dribble-file
+			       t)
        (setq user-login-name (replace-regexp-in-string
                               "@.*" "" user-mail-address))
-       
+       (setq user-full-name user-login-name)
+ 
 	    (eval (gnus-mail-imap-conf "imap.gmail.com"))
 	    (eval (gnus-mail-smtp-conf "smtp.gmail.com"))
 	    (gnus))

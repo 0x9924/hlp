@@ -1,3 +1,4 @@
 |------------------+------------------------------------------------------|
 | browse-kill-ring | https://github.com/browse-kill-ring/browse-kill-ring |
-|                  |                                                      |
+| auto-complete    | https://github.com/auto-complete/auto-complete      |
+
