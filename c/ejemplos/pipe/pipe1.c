@@ -2,7 +2,7 @@
  * Este programa:
  * $ ./prog -i FILEIN -o FILEOUT CMD [PARAM1 ...]
  * hace:
- * $ cat FILEIN | CMD > FILEOUT
+ * $ cat FILEIN | CMD | FILEOUT
  */
 
 #include <stdio.h>
@@ -43,11 +43,10 @@ int main(int argc, char **argv)
      int pfd[2];
      int fin, fout;
      if (argc == optind) { puts("Falta comando."); exit(1); }
-     
      if (pipe(pfd) == -1) { perror("pipe"); exit(1); } 
-     
      if ( fork() ) { // es padre
-          if ((fout = open(fileout, O_WRONLY) == -1)) {
+          if ((fout = open(fileout, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR ))
+              == -1) {
                perror("No se pudo abrir archivo"); exit(1);
           }
           close (pfd[1]);
@@ -72,5 +71,3 @@ int main(int argc, char **argv)
           exit(0);
      }
 }
-
-
