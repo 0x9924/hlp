@@ -32,3 +32,13 @@
 (if (package-installed-p 'auto-complete)
     (and (require 'auto-complete)
          (add-hook 'prog-mode-hook 'auto-complete-mode)))
+
+;; (if (file-directory-p "~/packages/emacs/text-translator")
+;;     (progn
+;;      (add-to-list 'load-path "~/packages/emacs/text-translator")
+;;      (customize-set-variable
+;;       'text-translator-default-engine
+;;       "google.com_enes")
+;;      (require 'text-translator)))
+  
+    

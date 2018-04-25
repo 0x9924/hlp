@@ -24,9 +24,8 @@ int main(int argc, char **argv)
           close(pfd[0]);
           close(pfd[1]);
           execvp (cmd_ls[0], cmd_ls);
-          exit(0);
+          close(pfd[0]);
+          close(pfd[1]);
      }
-     close(pfd[0]);
-     close(pfd[1]);
      return 0;
 }
