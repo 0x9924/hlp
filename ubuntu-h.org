@@ -1,15 +1,13 @@
-<<<<<<< HEAD
 |----------------------------+-----------------------------------------------------------------|
 | pub key                    | apt-key adv --keyserver keyserver.ubuntu.com --recv-keys PUBKEY |
 | upgrade                    | do-release-upgrade                                              |
 | boot in text mode systemd  | sudo systemctl disable display-manager.service                  |
+|----------------------------+-----------------------------------------------------------------|
 | cambiar layout del teclado | su; dpkg-reconfigure keyboard-configuration                     |
-=======
-|------------------+-----------------------------------------------------------------|
-| pub key          | apt-key adv --keyserver keyserver.ubuntu.com --recv-keys PUBKEY |
-| upgrade          | do-release-upgrade                                              |
-| add user to sudo | sudo adduser <user> sudo                                        |
-| login at startup | vim /etc/lightdm/lightdm.conf                              |
->>>>>>> 9fbc8f0bff394d52e22eab7e855018a7a96afe40
+|                            | setxkbmap es                                                    |
+|----------------------------+-----------------------------------------------------------------|
+| add user to sudo           | sudo adduser <user> sudo                                        |
+| login at startup           | vim /etc/lightdm/lightdm.conf                                   |
+
 
 
