@@ -1,0 +1,6 @@
+#+DEFINICIONES
+
+* grafo
+Un *grafo* $ G = (V, X) $ es un par de conjuntos, donde $V$ es un
+conjunto de puntos (o nodos o vértices) y $X$ es un subconjunto del
+conjunto no ordenado de pares de $V$.
