@@ -25,7 +25,7 @@
 
 (package-initialize)
 
-(if (package-installed-p 'w3m)
+(if (and (package-installed-p 'w3m) (not window-system))
     (and (require 'w3m)
      (setq-default browse-url-browser-function 'w3m-browse-url)))
 
