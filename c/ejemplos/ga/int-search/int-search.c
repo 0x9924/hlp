@@ -3,21 +3,16 @@
 #include <time.h>
 #include <limits.h>
 
-#define GEN_SIZE 50
-#define NGENERATIONS 32
+#include "../ga-print.h"
+
+#define GEN_SIZE 2
+#define NGENERATIONS 8
 
 int objetivo;
 
 int * random_ints (unsigned n_ints);
 void quicksort(int* a, long len);
-
-void ints_print (int* arr, unsigned size) {
-     for (int i = 0; i < size; i++) {
-        printf ("%20d ", arr[i]);
-        if (i % 5 == 0)
-            puts("");
-    }
-}
+void ints_print (int* arr, unsigned size);
 
 int fitness (int ind) {
      int diff = ind - objetivo;
@@ -45,18 +40,18 @@ int crossover_individual (int p0, int p1, unsigned nbits) {
 
 void crossover_generation (int* nueva_gen, int* vieja_gen, unsigned nbits) {
     for (int i = 0; i < GEN_SIZE / 2; i = i + 2) {
-        nueva_gen[i] = crossover_individual (vieja_gen[i], vieja_gen[i + 1], nbits);
-        nueva_gen[i + 1] = crossover_individual (vieja_gen[i], vieja_gen[i+1], nbits);
+        nueva_gen[i] = crossover_individual (vieja_gen[i],
+                                             vieja_gen[i + 1], nbits);
+        nueva_gen[i + 1] = crossover_individual (vieja_gen[i],
+                                                 vieja_gen[i+1], nbits);
     }
 }
-
-
 
 long partition (int* a, long p, long r){
      int x = a[r];
      long i = p - 1;
      for (long j = p; j < r; j++) {
-          if (fitness(a[j]) > fitness(x)) {
+          if (fitness(a[j]) <= fitness(x)) {
                i++;
                int tmp = a[i];
                a[i] = a[j];
@@ -105,14 +100,18 @@ int main (int argc, char ** argv) {
     int * g0 = random_ints (GEN_SIZE * 2);
     int * g1 = g0 + GEN_SIZE;
 
+    puts("g0");
+    ints_print(g0, GEN_SIZE);
+    prbitsINT(g0[0]);
     objetivo = 0;
     for (int i = 0; i < NGENERATIONS; i++) {
         crossover_generation (g0, g1, nbits);
         quicksort(g0, GEN_SIZE * 2);
-        mutar (g1, GEN_SIZE, nbits); 
+        mutar (g1, GEN_SIZE, nbits);
+        printf("g%d\n", i+ 1);
+        ints_print(g0, GEN_SIZE * 2);
     }
     
-    ints_print(g0, GEN_SIZE);
 
     //printf("int max: %x\n", (unsigned) INT_MAX);
     
