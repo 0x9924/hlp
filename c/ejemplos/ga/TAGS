@@ -1,0 +1,37 @@
+
+ga-prbits.c,288
+#define BYTETOBINPATTERN BYTETOBINPATTERN4,40
+#define INTTOBINPATTERN INTTOBINPATTERN5,84
+#define BYTETOBIN(BYTETOBIN10,255
+#define INTBIN(INTBIN21,497
+#define PRBIN(PRBIN55,1536
+#define prbits(prbits57,1618
+#define prbitsINT(prbitsINT59,1676
+#define prbool(prbool61,1733
+
+ga-print.c,60
+void ints_print (int* arr, unsigned size) {ints_print6,78
+
+ga-print.h,110
+#define INTTOBINPATTERN INTTOBINPATTERN2,1
+#define INTBIN(INTBIN5,97
+#define prbitsINT(prbitsINT40,1137
+
+ga-randints.c,55
+int * random_ints (unsigned n_ints) {random_ints5,60
+
+int-search/int-search.c,685
+#define GEN_SIZE GEN_SIZE9,124
+#define NGENERATIONS NGENERATIONS10,143
+int32_t objetivo;objetivo12,167
+int32_t fitness (int32_t ind) {fitness18,313
+int32_t crossover_individual (int32_t p, int32_t p, unsigned nbits) {crossover_individual25,478
+void crossover_generation (int32_t* nueva_gen, int32_t* vieja_gen, unsigned nbits) {crossover_generation40,861
+long partition (int32_t* a, long p, long r){partition49,1272
+void quicksort_aux(int32_t* a, long p, long r) {quicksort_aux66,1661
+void quicksort(int32_t* a, long len) {quicksort76,1858
+void mutar (int32_t * arreglo, unsigned size, unsigned nbits) {mutar80,1935
+int main (int argc, char ** argv) {main91,2229
+
+Makefile,27
+CFLAGS = -g  CFLAGS6,144

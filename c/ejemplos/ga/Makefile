@@ -11,7 +11,9 @@ obj/%.o: %.c obj
 # %.o: %.c obj
 # 	gcc -c -o obj/$@ $<
 
-int-search: obj/ga-randints.o obj/ga-print.o
+INT_SEARCH_SRC=int-search/fitness.c int-search/crossover.c int-search/sort.c \
+	int-search/mutar.c
+int-search: obj/ga-randints.o obj/ga-print.o $(INT_SEARCH_SRC)
 	gcc -o build/$@ $@/$@.c $^ 
 
 

@@ -1,8 +1,14 @@
+#ifndef _GA_PRINT_H
+#define _GA_PRINT_H
 
-#define INTTOBINPATTERN "%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d"
+
+void ints_print_hex (int* arr, unsigned size) ;
+void ints_print (int* arr, unsigned size) ;
+void ints_print_bin (int* arr, unsigned size) ;
+#define INT32TOBINPATTERN "%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d"
 
 
-#define INTBIN(byte)				\
+#define INT32BIN(byte)				\
     (byte & 0x80000000 ? 1 : 0),			\
 	(byte & 0x40000000 ? 1 : 0),			\
 	(byte & 0x20000000 ? 1 : 0),			\
@@ -37,4 +43,6 @@
 	(byte & 0x01 ? 1 : 0)
 
 
-#define prbitsINT(x) printf(INTTOBINPATTERN, INTBIN(x))
+#define prbitsINT32(x) printf(INT32TOBINPATTERN, INT32BIN(x))
+
+#endif
