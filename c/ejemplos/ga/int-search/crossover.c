@@ -1,7 +1,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#define NBITS 32
+#include "int-search.h"
+
 
 int32_t crossover_individual (int32_t p, int32_t q) {
     if (rand() % 2 == 0) { int32_t  tmp = p; p = q; q = tmp; }

@@ -1,9 +1,7 @@
 #include <stdlib.h>
 #include <stdint.h>
+#include "int-search.h"
 
-#ifndef NBITS
-#define NBITS 32
-#endif
 void mutar (int32_t * arreglo, unsigned size) {
      for (int i = 0; i < size ; i++) {
           unsigned bit  = 1 << (rand () % NBITS);
