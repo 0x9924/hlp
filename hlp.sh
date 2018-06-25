@@ -40,3 +40,4 @@ hlp () {
 }
 
 alias gmail="emacs -nw --eval '(gnus-gmail)'"
+alias emq="emacs -nw -Q"
