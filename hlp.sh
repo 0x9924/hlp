@@ -39,3 +39,8 @@ hlp () {
 
 }
 
+<<<<<<< HEAD
+=======
+alias gmail="emacs -nw --eval '(gnus-gmail)'"
+alias emq="emacs -nw -Q"
+>>>>>>> 11eb1457a2995ee7ddb5079045fa8be8bc23dffe
