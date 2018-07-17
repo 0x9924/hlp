@@ -39,4 +39,3 @@ hlp () {
 
 }
 
-alias gmail="emacs -nw --eval '(gnus-gmail)'"
