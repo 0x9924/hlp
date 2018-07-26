@@ -24,4 +24,5 @@
 | create group                                             | addgroup GROUP                                                                                |
 | lists users                                              | cut -d: -f1 /etc/passwd                                                                       |
 | list groups                                              | cat /etc/groups                                                                               |
+| informacion del procesador                               | car /proc/cpuinfo                                                                             |
 
