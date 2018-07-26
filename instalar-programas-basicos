@@ -1,0 +1,15 @@
+#!/bin/bash
+sudo apt update
+sudo apt install git curl w3m \
+     openssh-server \
+     emacs make ctags \
+     python3 ipython3 python3-pip \
+	 r-base r-base-dev \
+     texlive-base texlive-lang-spanish \
+     feh \
+     mplayer mpv
+
+echo Ahora instalo youtube-dl
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl \
+     -o /usr/local/bin/youtube-dl \
+    && sudo chmod a+rx /usr/local/bin/youtube-dl
