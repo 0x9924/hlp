@@ -1,28 +1,28 @@
 |----------------------------------------------------------+-----------------------------------------------------------------------------------------------|
-| crear live usb booteable (no anduvo)                     | dd if=$laiso of=/dev/sdb1                                                                     |
-| crear live usb booteable                                 | startup disk creator ## applicatin                                                            |
-| crear cd de iso                                          | wodim -v dev=/dev/sr0 -dao /home/user/file.iso                                                |
-| obtener nombre etiqueta usb(sdf1 es el lugar donde esta) | sudo mlabel -i /dev/sdf1 -s ::                                                                |
-| cambiar nombre etiqueta usb                              | sudo mlabel -i /dev/sdf1 ::NOMBRE                                                             |
-| check version                                            | lsb_release -a                                                                                |
-| boot in text mode                                        | vim -M /etc/defaul/grub ## to get help                                                        |
-| sacar "System program problem detected"                  | rm /var/crash/*                                                                               |
-| disable auto openning window after auto mount            | gsettings set org.gnome.desktop.media-handling automount-open false                           |
-| start windows after boot                                 | sudo service lightdm start                                                                    |
-| cread usb booteable                                      | satartup disk creator                                                                         |
-| boot in text mode                                        | sudo ln -sf /lib/systemd/system/multi-user.target /lib/systemd/system/default.target          |
-| see kernel threads                                       | ps -ef                                                                                        |
-| generate random string                                   | head /dev/urandom  => tr -dc 0-z  =>  head -c 8                                               |
-| creat  bootable cd from iso                              | wodim -v dev=/dev/sr0 -dao FILENAME                                                           |
+| add user to group                                        | adduser USER GROUP                                                                            |
 | batery                                                   | upower -i /org/freedesktop/UPower/devices/battery_BAT1 => grep -E "state to\ full percentage" |
-| montar                                                   | fdisk -l ...; mount ...                                                                       |
+| boot in text mode                                        | sudo ln -sf /lib/systemd/system/multi-user.target /lib/systemd/system/default.target          |
+| boot in text mode                                        | vim -M /etc/defaul/grub ## to get help                                                        |
+| cambiar nombre etiqueta usb                              | sudo mlabel -i /dev/sdf1 ::NOMBRE                                                             |
+| cread usb booteable                                      | satartup disk creator                                                                         |
+| crear  user                                              | adduser USER                                                                                  |
+| crear cd de iso                                          | wodim -v dev=/dev/sr0 -dao /home/user/file.iso                                                |
+| crear live usb booteable                                 | startup disk creator ## applicatin                                                            |
+| crear live usb booteable (no debian si antergos)         | dd if=$laiso of=/dev/sdb1                                                                     |
+| creat  bootable cd from iso                              | wodim -v dev=/dev/sr0 -dao FILENAME                                                           |
+| create group                                             | addgroup GROUP                                                                                |
+| disable auto openning window after auto mount            | gsettings set org.gnome.desktop.media-handling automount-open false                           |
+| generate random string                                   | head /dev/urandom  => tr -dc 0-z  =>  head -c 8                                               |
 | get mounted filesystems0                                 | cat /proc/mounts                                                                              |
 | get mounted filesystems1                                 | cat /etc/mtab                                                                                 |
 | get mounted filesystems2                                 | findmnt                                                                                       |
-| crear  user                                              | adduser USER                                                                                  |
-| add user to group                                        | adduser USER GROUP                                                                            |
-| create group                                             | addgroup GROUP                                                                                |
-| lists users                                              | cut -d: -f1 /etc/passwd                                                                       |
-| list groups                                              | cat /etc/groups                                                                               |
 | informacion del procesador                               | car /proc/cpuinfo                                                                             |
-
+| list groups                                              | cat /etc/groups                                                                               |
+| lists users                                              | cut -d: -f1 /etc/passwd                                                                       |
+| montar                                                   | fdisk -l ...; mount ...                                                                       |
+| obtener nombre etiqueta usb(sdf1 es el lugar donde esta) | sudo mlabel -i /dev/sdf1 -s ::                                                                |
+| sacar "System program problem detected"                  | rm /var/crash/*                                                                               |
+| see kernel threads                                       | ps -ef                                                                                        |
+| start windows after boot                                 | sudo service lightdm start                                                                    |
+| version del kernel                                       | uname -r                                                                                      |
+| version ubuntu                                           | lsb_release -a                                                                                |
