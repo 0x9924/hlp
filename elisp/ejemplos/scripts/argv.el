@@ -2,10 +2,8 @@
 :; exec emacs -Q --script "$0" -f main -- "$@" # -*- mode:lisp -*-
 
 (defun main ()
- (print argv)
- (foo)
- (kill-emacs))
-
-
-(defun foo ()
-  (print "in foo"))
+  (require 'package)
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.org/packages/"))
+  (package-install 'w3m)
+  (kill-emacs))
