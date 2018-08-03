@@ -4,3 +4,4 @@
 | check if no window or not      | (if window-system (load-theme 'manoj-dark)) |
 | insert STR at beg of rectangle | M-x string-insert-rectangle                 |
 | rectangle mark                 | C-x SPC                                     |
+| open info file in info mode    | C-u C-h i                                   |

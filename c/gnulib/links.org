@@ -1,0 +1,2 @@
+http://wiki.opencsw.org/adding-gnulib
+https://developer.gnome.org/anjuta-build-tutorial/stable/create-autotools.html.en
