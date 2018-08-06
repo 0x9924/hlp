@@ -1,6 +1,7 @@
 #ifndef _LISTA_H
 #define _LISTA_H
 
+#include <iostream>
 using namespace std;
 
 template <class T>
@@ -19,9 +20,10 @@ public:
      Nodo(T e) { data = e; _prev = _next = this; }
      Nodo(T e, Nodo<T> * prev, Nodo<T> * next) {
           data = e;
-          prev = _prev;
-          next = _next;
+          _prev = prev;
+          _next = next;
      }
+     
           
 };
 
@@ -33,10 +35,17 @@ class Lista {
      Nodo<T> * ultimo_nodo() { return _head -> prev(); } 
 public:
      Lista<T>() : _head(NULL), _size(0) {}
-          
+
+     ~Lista<T>() {
+          while (_size > 0) {
+               pop();
+          }
+     }
+
      Nodo<T>* head() { return _head; }
      int size() { return _size; }
      void agregar(T e);
+     T pop();
 };
 
 template<class T>
@@ -54,5 +63,20 @@ void Lista<T>::agregar(T e)
      }
      _size++;
 }
+
+
+template<class T>
+T Lista<T>::pop() {
+     Nodo<T> * ult = ultimo_nodo();
+     T res = ult -> data;
+     ult -> prev() -> set_next(ult -> next()) ;
+     ult -> next() -> set_prev(ult -> prev()) ;
+     _size--;
+     delete ult;
+     ult = NULL;
+     return res;
+     
+}
+
 
 #endif // _LISTA_H

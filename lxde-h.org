@@ -1,0 +1,4 @@
+|                |                                  |
+|----------------+----------------------------------|
+| shortcuts file | ~/.config/openbox/lubuntu-rc.xml |
+|                |                                  |
