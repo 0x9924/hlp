@@ -4,13 +4,13 @@
 using namespace std;
 
 int main () {
-     Lista<int> l;
-     l.agregar(1);
-     l.agregar(7);
+     List<int> l;
+     l.push(1);
+     l.push(7);
      for (int i = 0; i < 111; i++)
-          l.agregar(i);
+          l.push(i);
      
-     Nodo<int> * n = l.head();
+     Node<int> * n = l.first_node();
 
      for (int i = 0; i < l.size(); i++) {
           cout << n ->value() << " ";

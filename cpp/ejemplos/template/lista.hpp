@@ -5,20 +5,20 @@
 using namespace std;
 
 template <class T>
-class Nodo {
+class Node {
      T data;
-     Nodo<T> * _next;
-     Nodo<T> * _prev;
+     Node<T> * _next;
+     Node<T> * _prev;
 public:
-     Nodo<T> * next() { return _next; }
-     Nodo<T> * prev() { return _prev; }
-     void set_next(Nodo<T> * next) { _next = next; }
-     void set_prev(Nodo<T> * prev) { _prev = prev; }
+     Node<T> * next() { return _next; }
+     Node<T> * prev() { return _prev; }
+     void set_next(Node<T> * next) { _next = next; }
+     void set_prev(Node<T> * prev) { _prev = prev; }
      T value() { return data; }
      template <typename ListT>
-     friend class Lista;
-     Nodo(T e) { data = e; _prev = _next = this; }
-     Nodo(T e, Nodo<T> * prev, Nodo<T> * next) {
+     friend class List;
+     Node(T e) { data = e; _prev = _next = this; }
+     Node(T e, Node<T> * prev, Node<T> * next) {
           data = e;
           _prev = prev;
           _next = next;
@@ -28,37 +28,33 @@ public:
 };
 
 template<class T>
-class Lista {
-     Nodo<T> *_head;
+class List {
+     Node<T> *_first;
      int _size;
      // pre: size > 0
-     Nodo<T> * ultimo_nodo() { return _head -> prev(); } 
+     Node<T> * last_node() { return _first -> prev(); } 
 public:
-     Lista<T>() : _head(NULL), _size(0) {}
+     List<T>() : _first(NULL), _size(0) {}
 
-     ~Lista<T>() {
-          while (_size > 0) {
-               pop();
-          }
-     }
+     ~List<T>() { while (_size > 0) { pop(); } }
 
-     Nodo<T>* head() { return _head; }
+     Node<T>* first_node() { return _first; }
      int size() { return _size; }
-     void agregar(T e);
+     void push(T e);
      T pop();
 };
 
 template<class T>
-void Lista<T>::agregar(T e) 
+void List<T>::push(T e) 
 {
-     if (!_head) {
-          Nodo<T>* tmp = new Nodo<T>(e);
-          _head = tmp;
+     if (!_first) {
+          Node<T>* tmp = new Node<T>(e);
+          _first = tmp;
      } else {
-          Nodo<T> * ult = ultimo_nodo();
-          Nodo<T> * n = new Nodo<T>(e, ult, _head);
+          Node<T> * ult = last_node();
+          Node<T> * n = new Node<T>(e, ult, _first);
           ult -> set_next(n);
-          _head -> set_prev(n);
+          _first -> set_prev(n);
                     
      }
      _size++;
@@ -66,8 +62,8 @@ void Lista<T>::agregar(T e)
 
 
 template<class T>
-T Lista<T>::pop() {
-     Nodo<T> * ult = ultimo_nodo();
+T List<T>::pop() {
+     Node<T> * ult = last_node();
      T res = ult -> data;
      ult -> prev() -> set_next(ult -> next()) ;
      ult -> next() -> set_prev(ult -> prev()) ;
@@ -75,7 +71,6 @@ T Lista<T>::pop() {
      delete ult;
      ult = NULL;
      return res;
-     
 }
 
 
