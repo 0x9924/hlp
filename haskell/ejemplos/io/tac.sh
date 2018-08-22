@@ -15,7 +15,3 @@ version = putStrLn "Haskell tac 0.1"
 exit    = exitWith ExitSuccess
 die     = exitWith (ExitFailure 1)
 
-
--- main = do
---   args <- getArgs
---   print args
