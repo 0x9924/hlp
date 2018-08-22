@@ -1,0 +1,4 @@
+|            |                                        |
+|------------+----------------------------------------|
+| find leaks | valgrind --leak-check=full -v PROGRAMA |
+|            |                                        |

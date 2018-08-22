@@ -1,0 +1,6 @@
+initialization using {}.
+it doues not allo narrowins.
+    For example, int => char convertion is not allowed (char => int yes).
+    double => float not allowed, float => double yes.
+    floating-point to integer conversion is not allowed.
+    an integer to a floating-point neither.

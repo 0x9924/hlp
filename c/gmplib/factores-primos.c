@@ -32,14 +32,10 @@ int main(int argc, char *argv[])
     mpz_init(cuadrado);
 
     unsigned long i = 0;
-    if ( argc != 2 )
-    {					/* not enough words */
-        /* printf("Please supply 1 number.\n"); */
-        /* return 1; */
+    if ( argc != 2 ) {					
         mpz_set_ui (n, 2);
-    }
-    else     // n es el numero.
-      mpz_set_str (n, argv[1], 10);	/* Assume decimal integers */
+    } else     // n es el numero.
+         mpz_set_str (n, argv[1], 10);	
 
     gmp_printf ("El numero es %Zd\n", n);
 

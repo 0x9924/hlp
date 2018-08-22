@@ -4,5 +4,6 @@
 | create an app           | python manage.py startapp appname   |
 | hacer migrations de APP | python manage.py makemigrations APP |
 | aplicar las migrations  | python manage.py migrate            |
-| crear admin             | python manage createsuperuser       |
+| crear admin             | python manage.py createsuperuser    |
+| shell                   | python manage.py shell              |
 |                         |                                     |

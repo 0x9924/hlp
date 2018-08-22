@@ -1,6 +1,0 @@
-(let lp ((x 100)
-         (y 0))
-  (if (positive? x)
-      (lp (- x 1) 0)
-      x)
-  (display x) (newline))

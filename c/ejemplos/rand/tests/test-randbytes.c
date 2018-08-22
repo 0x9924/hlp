@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include "print-bytes.h"
-#include "random-bytes.h"
+#include <stdint.h>
+#include "../print-bytes.h"
+#include "../random-bytes.h"
 
 size_t cantidad = 0xFFFFFF;
 
