@@ -1,9 +1,6 @@
 data Arbol = Hoja Integer | Ramificacion Arbol Integer Arbol deriving Show
 data Dir = Der | Izq deriving (Show, Eq)
 
-h1 = Hoja 1
-h2 = Hoja 2
-a = Ramificacion (Ramificacion h1 0 h2) 1  (Ramificacion h1  0 h1)
 esHoja :: Arbol -> Bool
 esHoja (Hoja _) = True
 esHoja _ = False

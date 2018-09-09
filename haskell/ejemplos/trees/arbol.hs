@@ -1,10 +1,6 @@
 data Arbol t = Hoja t | Ramificacion (Arbol t) t (Arbol t) deriving Show
 data Dir = Der | Izq deriving (Show, Eq)
 
-h1 = Hoja 1
-h2 = Hoja 2
-a = Ramificacion (Ramificacion h1 0 h2) 1  (Ramificacion h1  0 h1)
-b = Ramificacion (Ramificacion h1 1 h1) 1  (Ramificacion h1  1 h1)
 esHoja :: Arbol t -> Bool
 esHoja (Hoja _) = True
 esHoja _ = False

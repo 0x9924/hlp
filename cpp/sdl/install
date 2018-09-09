@@ -1,0 +1,22 @@
+sudo apt-get install libsdl2-dev
+compile with: -lSDL2main -lSDL2
+header: #include <SDL2/SDL.h>
+
+
+apt-get install libsdl2-image-dev  
+compile with: -lSDL2_image
+header: #include <SDL2/SDL_image.h>
+
+
+
+apt-get install libsdl2-mixer-dev  
+compile with: -lSDL2_ttf
+header: #include <SDL2/SDL_ttf.h>
+
+
+apt-get install libsdl2-ttf-dev
+compile with: -lSDL2_mixer
+header: #include <SDL2/SDL_mixer.h>
+
+
+
