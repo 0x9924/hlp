@@ -1,0 +1,41 @@
+*  Boot Lubuntu in text mode
+
+Modify your file /etc/default/grub withod/etc/default/grub with
+
+GRUB_CMDLINE_LINUX_DEFAULT="text"
+
+and do sudo update-grub. The machine will boot in text mode.
+
+To start the graphical interface you do
+
+sudo service gdm start
+
+* systemctl
+If you just need to switch to text mode with no GUI stuff like the X server running, you can use systemctl to get your machine to the so-called multi-user.target:
+
+sudo systemctl start multi-user.target
+
+You revert this and get back to the desktop (graphical.target) by either rebooting or by switching back manually in the same way as above:
+
+sudo systemctl start graphical.target
+
+
+
+* systenctl 2
+
+
+To boot Ubuntu 16.04 Desktop without X one time, add systemd.unit=multi-user.target to the linux command line in GRUB.
+
+To make this the default, use
+
+sudo systemctl set-default multi-user.target
+
+To return to default booting into X, use
+
+sudo systemctl set-default graphical.target
+
+To see the current default target,
+
+sudo systemctl get-default
+
+
