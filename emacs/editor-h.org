@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 |---------------------------------------------------------------------------------+---------------------------------------------|
 | jump previous buffer                                                            | C-x C-space                                 |
 | toggle-read-only                                                                | C-x C-q                                     |
@@ -10,9 +11,9 @@
 | Save the position of point (and the name of the current buffer) into register R | C-x r SPC R                                 |
 | Copy the frame configuration into register R                                    | C-x r f R                                   |
 | Copy the window configuration into register R                                   | C-x r w R                                   |
+| next conflict                  | smerge-next                                 |
+| previous conflict              | smerge-previous                             |
+| keep current                   | smerge-keep-current                         |
+| keep mine                      | smerge-keep-mine                            |
+| keep other                     | smerge-keep-other                           |
 |                                                                                 |                                             |
-                    
-                    
-                    
-                    
-                    
