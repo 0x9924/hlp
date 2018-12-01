@@ -1,7 +1,18 @@
-|--------------------------------+---------------------------------------------|
-| jump previous buffer           | C-x C-space                                 |
-| toggle-read-only               | C-x C-q                                     |
-| check if no window or not      | (if window-system (load-theme 'manoj-dark)) |
-| insert STR at beg of rectangle | M-x string-insert-rectangle                 |
-| rectangle mark                 | C-x SPC                                     |
-| open info file in info mode    | C-u C-h i                                   |
+|---------------------------------------------------------------------------------+---------------------------------------------|
+| jump previous buffer                                                            | C-x C-space                                 |
+| toggle-read-only                                                                | C-x C-q                                     |
+| check if no window or not                                                       | (if window-system (load-theme 'manoj-dark)) |
+| insert STR at beg of rectangle                                                  | M-x string-insert-rectangle                 |
+| rectangle mark                                                                  | C-x SPC                                     |
+| open info file in info mode                                                     | C-u C-h i                                   |
+| Copy the region into register R                                                 | C-x r s R                                   |
+| Copy the region-rectangle into register R                                       | C-x r r R                                   |
+| Save the position of point (and the name of the current buffer) into register R | C-x r SPC R                                 |
+| Copy the frame configuration into register R                                    | C-x r f R                                   |
+| Copy the window configuration into register R                                   | C-x r w R                                   |
+|                                                                                 |                                             |
+                    
+                    
+                    
+                    
+                    

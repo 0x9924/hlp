@@ -18,3 +18,4 @@ tmp*
 node/ejemplos/rep-ej
 *.stackdump
 build
+*.gz
