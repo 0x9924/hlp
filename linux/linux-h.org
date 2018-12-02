@@ -16,7 +16,7 @@
 | get mounted filesystems0                                 | cat /proc/mounts                                                                              |
 | get mounted filesystems1                                 | cat /etc/mtab                                                                                 |
 | get mounted filesystems2                                 | findmnt                                                                                       |
-| informacion del procesador                               | car /proc/cpuinfo                                                                             |
+| informacion del procesador                               | cat /proc/cpuinfo                                                                            |
 | list groups                                              | cat /etc/groups                                                                               |
 | lists users                                              | cut -d: -f1 /etc/passwd                                                                       |
 | montar                                                   | fdisk -l ...; mount ...                                                                       |
