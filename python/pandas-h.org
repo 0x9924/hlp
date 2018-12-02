@@ -1,0 +1,4 @@
+|-------------------+-----------------|
+| index dataframe i | df.iloc[:,:]    |
+| index dataframe c | df.loc["STR",:] |
+|                   |                 |
