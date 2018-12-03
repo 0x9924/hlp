@@ -9,5 +9,5 @@
 | previous conflict              | smerge-previous                             |
 | keep current                   | smerge-keep-current                         |
 | keep mine                      | smerge-keep-mine                            |
-| keep other                     | smerge-keep-other                           |
+| keep other                     | C-c ^ o  ;smerge-keep-other                 |
 
