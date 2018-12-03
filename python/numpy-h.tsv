@@ -1,5 +1,0 @@
-# -*- mode:csv -*-
-crear matrix 1	numpy.matrix('1,0,0; 0,1,0; 0,0,1')
-crear matrix 2	numpy.matrix([[1,0,0],[0,1,0],[0,0,1]])
-trasponer matrix	miMatriz.transpose()
-resolver sistema	numpy.linalg.solve(A,B)

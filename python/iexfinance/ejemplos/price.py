@@ -10,7 +10,7 @@ def main(argv):
             s = Stock(n)
             price = s.get_price()
             open = s.get_open()
-            variation = 100 * (open - price)/ open
+            variation = 100 * (price - open)/ open
             print("{}\t{}\t{}\t{:.3f} %"
                   .format(n, price, open, variation))
         except:
