@@ -2,9 +2,10 @@
 ## we want to min x that |Ax - b|
 
 QR <- qr(A)
+qr.solve(QR, b)
+
 Q <- qr.Q(QR)
 R <- qr.R(QR)
 c <- t(Q) %*% b
 
-solve(R,c)
-## qr.solve(QR, b)
+qr.solve(QR, b)
