@@ -1,0 +1,30 @@
+
+|----------------------------------------+--------------------------------------|
+| seed random                            | arma::arma_rng::set:seed:random()    |
+| matrix type                            | arma::Mat<T>                         |
+| print mattrix                          | cout << Mat                          |
+| multiply matrices                      | A * B                                |
+| access row                             | A.row(i)                             |
+| access col                             | A.col(j)                             |
+| export matrix                          | A.save("FILENAME", arma::arma_ascii) |
+| assign                                 | X(1,2) = 3                           |
+| Add A and B                            | X = A + B                            |
+| submatrix                              | X( span(1,2), span(3,4) )            |
+| null vector                            | zeros(rows [, cols [, slices]))      |
+| 1s                                     | ones(rows [, cols [, slices]))       |
+| I                                      | eye(rows, cols)                      |
+| Replicate matrix                       | repmat(X, row_copies, col_copies)    |
+| determinant                            | det(X)                               |
+| p-norm of matrix or vector X           | norm(X, p)                           |
+| rank                                   | rank(X)                              |
+| min value                              | min(X, dim=0)                        |
+| max value                              | max(X, dim=0)                        |
+| transpose                              | trans(X) or X.t()                    |
+| cholesky                               | R = chol(X)                          |
+| inverse                                | inv(X) or X.i()                      |
+| pseudo inverse                         | pinv(X)                              |
+| LU decomposition with partial pivoting | lu(L, U, P, X) or lu(L, U, X)        |
+| QR decomposition                       | lu(L, U, X)                          |
+| Solve AX = B                           | X = solve(A, B)                      |
+| SVD decomposition                      | s = svd(X); svd(U, s, V, X)          |
+|                                        |                                      |
