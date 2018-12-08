@@ -1,0 +1,7 @@
+|                   |                    |
+|-------------------+--------------------|
+| get hist data     | getSymbols("NAME") |
+| get current price | getQuote("NAME")   |
+| lot serie         | chartSeries(NAME)  |
+| plot              | barChart(NAME)     |
+| close prices      | Cl(NAME)           |
