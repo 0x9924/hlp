@@ -1,0 +1,3 @@
+|---------------+--------------------------------|
+| crear paquete | create_package('PACKAGE_NAME') |
+| make docs     | document()                     |

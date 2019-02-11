@@ -1,0 +1,4 @@
+|--------------------+----------------------------------|
+| permutation matrix | p <- (c(4, 3, 1, 2), "pMatrix")  |
+| sparse matrix      | Martix::Matrix(M, sparse = TRUE) |
+| check sparse       | is (M, "sparseMatrix")           |

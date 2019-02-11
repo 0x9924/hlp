@@ -1,11 +1,13 @@
-|--------------------------+-------------------------------------|
-| print subarray array[0:9 | p array[0]@10                       |
-| examine memory           | x/nfu addr; n=num,f=format,u=sizeof |
-|--------------------------+-------------------------------------|
-| unit size                |                                     |
-| byte                     | b                                   |
-| 2 bytes (Halfword)       | h                                   |
-| 4 bytes (Word)           | w                                   |
-| 8 bytes (Giant word)     | g                                   |
-|--------------------------+-------------------------------------|
-|                          |                                     |
+|---------------------------+-------------------------------------|
+| print subarray array[0:9] | p array[0]@10                       |
+| examine memory            | x/nfu addr; n=num,f=format,u=sizeof |
+|---------------------------+-------------------------------------|
+| unit size                 |                                     |
+| byte                      | b                                   |
+| 2 bytes (Halfword)        | h                                   |
+| 4 bytes (Word)            | w                                   |
+| 8 bytes (Giant word)      | g                                   |
+|---------------------------+-------------------------------------|
+| assembly code             | C-x 2                               |
+| registers                 | C-x 2 // tui reg GROUP              |
+|                           |                                     |
