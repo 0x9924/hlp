@@ -1,0 +1,30 @@
+%%Original version by J.S.Milne 25.09.05 (two2one.tex - http://www.jmilne.org/math/Books/scan.html)
+%%Updated by Nicola Rainiero (http://rainnic.altervista.org/it/tag/latex)
+%%Correct this file for the number of pages in your document
+%%Correct this file for the size of your document in postscript points
+%%To do this, you need to find the size of your input document in points (Inkscape, Gimp or PDF Reader)
+%%Run pdflatex on this file: pdflatex "name of this file"
+
+% letterpaper, landscape or portrait
+\documentclass[portrait]{minimal}
+%%force the final dimension of PDF, put the maximum difference among the coordinates of the cropped areas
+%%(x direction: width, y direction: height)
+\usepackage[paperwidth=383pt,paperheight=696pt]{geometry}
+\usepackage{pdfpages}
+\usepackage{ifthen}
+
+\newcounter{pg} %counter of pages
+\begin{document}
+\setcounter{pg}{1} %fix the first page
+%% my pdf file has 10 pages
+%% my pdf file has size 595 x 841 points (width X height)
+\whiledo{\value{pg} < 16}{% default pages + 1, pages +0 if there are two increments of pg
+%%x0,y0 at the bottom left -- x1,y1 at the top right of the selection
+   \includepdf[pages=\thepg,viewport=0 50 450 550]{two_side.pdf} %pages on the right side, (odd pages)
+   \addtocounter{pg}{1} %page increment
+   %% \includepdf[pages=\thepg,viewport=0 0 595 841]{two_side.pdf} %pages on the left side, (even pages)
+   %% \addtocounter{pg}{1} %page increment
+}%
+
+
+\end{document}

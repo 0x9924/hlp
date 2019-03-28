@@ -2,3 +2,5 @@
 | permutation matrix | p <- (c(4, 3, 1, 2), "pMatrix")  |
 | sparse matrix      | Martix::Matrix(M, sparse = TRUE) |
 | check sparse       | is (M, "sparseMatrix")           |
+| condition number   | kappa (x, exact = TRUE)          |
+| lu decomposition   | Matrix::expand(Matrix::lu(x))    |
