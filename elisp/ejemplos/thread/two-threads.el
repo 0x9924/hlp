@@ -30,18 +30,3 @@
     (make-thread thread1)
     (make-thread thread2) ))
 
-
-(defun foo ()
-  (interactive)
-  (dolist (x (number-sequence 1 20))
-    (insert (format "%s\n" x))
-    (sleep-for 0 120)))
-
-
-(defun bar ()
-  (interactive)
-  (loop for x being (number-sequence 1 20)
-        do (progn
-             (insert (format "%s\n" x))
-             (sleep-for 0 120))))
-
