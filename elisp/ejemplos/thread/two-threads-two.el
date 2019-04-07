@@ -28,5 +28,7 @@
     (insert "In two-threads")
     (newline)
     (make-thread thread1 "thread1")
-    (make-thread thread2 "thread2") ))
+    (make-thread thread2 "thread2")
+    (insert "end")
+    ))
 
