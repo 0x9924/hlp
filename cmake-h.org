@@ -1,0 +1,3 @@
+|-----------------+---------------------------------------|
+| debug (-g flag) | cmake -DCMAKE_BUILD_TYPE=Debug <path> |
+|                 |                                       |

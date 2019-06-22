@@ -10,6 +10,10 @@ include_directories(${Boost_INCLUDE_DIR})
 find_package(Boost COMPONENTS system)
 
 
-add_executable(client2 client2.cpp)
-target_link_libraries(client2 ${Boost_LIBRARIES})
-target_link_libraries(client2 ${CMAKE_THREAD_LIBS_INIT} )
+add_executable(client client.cpp)
+target_link_libraries(client ${Boost_LIBRARIES})
+target_link_libraries(client ${CMAKE_THREAD_LIBS_INIT} )
+
+add_executable(client-http client-http.cpp)
+target_link_libraries(client-http ${Boost_LIBRARIES})
+target_link_libraries(client-http ${CMAKE_THREAD_LIBS_INIT} )

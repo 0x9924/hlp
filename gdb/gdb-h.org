@@ -10,4 +10,4 @@
 |---------------------------+-------------------------------------|
 | assembly code             | C-x 2                               |
 | registers                 | C-x 2 // tui reg GROUP              |
-|                           |                                     |
+| use command line args     | gdb --args prog ARGS...             |
