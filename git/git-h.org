@@ -26,4 +26,3 @@
 | disable SSL certificate for command                | env GIT_SSL_NO_VERIFY=true git command                 |
 | bajar carpeta especifica de github                 | svn checkout https://github.com/user/repo/trunk/folder |
 | list files in commit                               | git ls-tree --full-tree -r HEAD                        |
-|                                                    |                                                        |
