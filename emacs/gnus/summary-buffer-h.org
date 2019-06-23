@@ -5,7 +5,7 @@
 | go to parent article                 | A r ^                                                                            |
 | mark article as read                 | d                                                                                |
 | mark region as read                  | C-w                                                                              |
-| mark threas as reak                  | T k                                                                              |
+| mark threas as read                  | T k                                                                              |
 | mark articles in buffer              | M P a                                                                            |
 | mark articles in region              | M P r                                                                            |
 | mark with process mark               | #                                                                                |

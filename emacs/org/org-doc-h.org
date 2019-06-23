@@ -1,23 +1,24 @@
-|------------------------+---------------------------------------------------------------------|
-| margenes para latex    | #+LaTeX_HEADER: \usepackage[margin=2cm]{geometry}                   |
-| ''                     | #+LaTex_CLASS_OPTION: [margin=2cm]                                  |
-| ''                     | #+Latex_header: \geometry{left=10mm,right=10mm,top=5mm,bottom=20mm} |
-|------------------------+---------------------------------------------------------------------|
-| Título                 | #+Title:                                                            |
-| Links                  | [[link][description] ]                                              |
-|------------------------+---------------------------------------------------------------------|
-| publicar proyecto      | M-: (org-publish "project name" t)                                  |
-| ''                     | C-u M-x org-publish "project name"                                  |
-|------------------------+---------------------------------------------------------------------|
-| sin Table of Contents  | #+OPTIONS: toc:nil                                                  |
-|------------------------+---------------------------------------------------------------------|
-| links                  | [ [url][nombre] ]                                                   |
-| font size              | #+Latex_class_options: [12pt]                                       |
-| sin sangría            | #+LATEX_header: \setlength{\parindent}{0em}                         |
-| espacio entre parrafos | #+latex_header: \usepackage{parskip}                                |
-| export body only       | C-ceb h h                                                           |
-| justificar p           | #+HTML: <style> p {text-align:justify;} </style>                    |
-|                        |                                                                     |
+|----------------------------+---------------------------------------------------------------------|
+| margenes para latex        | #+LaTeX_HEADER: \usepackage[margin=2cm]{geometry}                   |
+| ''                         | #+LaTex_CLASS_OPTION: [margin=2cm]                                  |
+| ''                         | #+Latex_header: \geometry{left=10mm,right=10mm,top=5mm,bottom=20mm} |
+|----------------------------+---------------------------------------------------------------------|
+| Título                     | #+Title:                                                            |
+| Links                      | [[link][description] ]                                              |
+|----------------------------+---------------------------------------------------------------------|
+| publicar proyecto          | M-: (org-publish "project name" t)                                  |
+| ''                         | C-u M-x org-publish "project name"                                  |
+|----------------------------+---------------------------------------------------------------------|
+| sin Table of Contents      | #+OPTIONS: toc:nil                                                  |
+|----------------------------+---------------------------------------------------------------------|
+| links                      | [ [url][nombre] ]                                                   |
+| font size                  | #+Latex_class_options: [12pt]                                       |
+| sin sangría                | #+LATEX_header: \setlength{\parindent}{0em}                         |
+| espacio entre parrafos     | #+latex_header: \usepackage{parskip}                                |
+| export body only           | C-ceb h h                                                           |
+| justificar p               | #+HTML: <style> p {text-align:justify;} </style>                    |
+| mostrar contenido al abrir | #+STARTUP: [fold OR nofold OR content OR showeverything ]           |
+|                            |                                                                     |
 
                                                   
 
