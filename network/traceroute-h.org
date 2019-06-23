@@ -1,0 +1,3 @@
+|----------------------+-------------------------|
+| show only ip address | traceroute -n IP_ADRESS |
+|                      |                         |

@@ -1,7 +1,7 @@
 |   |                                                                                 |
 |---+---------------------------------------------------------------------------------|
 |   | sudo su - postgres                                                              |
-|   | psql                                                                            |
+|   | psql [TABLE_NAME]                                                               |
 |   | CREATE DATABASE dbname;                                                         |
 |   | DROP DATABASE dbname                                                            |
 |   | CREATE USER myprojectuser WITH PASSWORD 'password';                             |

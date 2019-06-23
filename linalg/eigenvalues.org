@@ -1,0 +1,9 @@
+* Propositions
+
+** Let A invertible and (l,v) an eigenpair of A. Then (1/l,v) is eigenpair of inv(A).
+Proof:
+Av = lv => inv(A)Av = inv(A)l v => v = l inv(A)v => inv(A)v = (1/l)v
+
+** Let A an n x n matrix and p \in C. Then if (l,v) is eigenpair of A, (l-p,v) is eigenpair of A -pI.
+Proof:
+Av = lv => (A - pI)v = lv - pv = (l - p)v

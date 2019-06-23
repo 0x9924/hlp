@@ -17,4 +17,5 @@
 | deciles percentiles quarties                  | quantile(x, prob=seq(0,1,length=11), type=5)                                   |
 | read file to string                           | x <- readChar(FILENAME, file.info(FILENAME)$size)                              |
 | remove outliers                               | x[!x %in% boxplot.stats(x)$out]                                                |
-|                                               |                                                                                |
+| more error info                               | options(error = recover)                                                       |
+| call by ref                                   | use assign                                                                     |

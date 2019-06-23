@@ -1,0 +1,2 @@
+* compile one file
+g++ file.c -larmadillo
