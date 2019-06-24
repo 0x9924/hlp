@@ -1,0 +1,4 @@
+| DESCRIPCION        | COMANDO                                  |
+|--------------------+------------------------------------------|
+| fix commit comment | git commit --amend                       |
+| fix user name      | git commit --amend --rese-user --no-edit |
