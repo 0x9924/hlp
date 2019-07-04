@@ -1,0 +1,54 @@
+#+startup:nofold
+* Hello World Django
+
+#+begin_src bash
+$ mkdir hw
+$ cd hw
+$ pipenv install django==2.2.0
+$ pipenv shell
+(hw) user@host:~/hw$
+
+(hw) $ django-admin startproject hwproject .
+#+end_src
+
+Con esto se habrán creado:
+
+.
+├── hwproject
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── Pipfile
+├── Pipfile.lock
+└── tmp
+
+
+Luego, creamos una app:
+
+#+begin_src bash
+(hw) $ python manage.py startapp pages
+#+end_src
+
+Esto creará:
+
+pages/
+├── admin.py
+├── apps.py
+├── __init__.py
+├── migrations
+│   └── __init__.py
+├── models.py
+├── tests.py
+└── views.py
+
+Pero hay que agregar la app al proyecto:
+
+settings.py:
+#+begin_src python
+INSTALLED_APPS = [
+    # ...
+    pages.apps.PagesConfig,
+]
+#+end_src

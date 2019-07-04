@@ -1,0 +1,39 @@
+https://stackoverflow.com/questions/10267500/libcurl-and-imap
+
+There is a good email on the mailing list describing the IMAP syntax here: http://curl.haxx.se/mail/lib-2013-03/0104.html
+
+This is the relevant part:
+
+--url imap://mail.example.com/INBOX/;UID=1 - Selects the user's inbox and fetches message 1
+
+--url imap://mail.example.com/INBOX;UIDVALIDITY=50/;UID=2 - Selects the user's inbox, checks the UIDVALIDITY of the mailbox is 50 and fetches message 2 if it is
+
+--url imap://mail.example.com/INBOX/;UID=3/;SECTION=TEXT - Selects the user's inbox and fetches message 3 with only the text portion of the message
+
+In addition to retrieving an email it is also possible to transfer an email to the server. This is achieved through IMAPs APPEND command and simply utilising curl's existing mechanism for uploading data to a server:
+
+--url imap://mail.example.com/OUTBOX -T email.txt
+
+    Other commands can be issued, such as: LIST to list the sub-folders of a mailbox; EXAMINE to see what emails exist in a mailbox; CREATE, RENAME and DELETE to manipulate sub-folders, STORE to change the properties of an email and others. Some examples are as follows:
+
+--url imap://mail.example.com - Performs a top level folder list
+
+--url imap://mail.example.com/INBOX - Performs a folder list on the user's inbox
+
+--url imap://mail.example.com -X "EXAMINE INBOX" - Performs a message list on the user's inbox
+
+--url imap:// mail.example.com/INBOX -X "CREATE Sub-folder" - Creates a sub-folder within the user's inbox
+
+--url imap:// mail.example.com/INBOX -X "RENAME Sub-folder My-folder" - Renames the sub-folder within the user's inbox to my-folder
+
+--url imap:// mail.example.com/INBOX -X "DELETE Sub-folder" - Deletes the sub-folder within the user's inbox
+
+--url imap:// mail.example.com/INBOX -X "STORE 1 +Flags \Deleted" - Deletes message 1 from the user's inbox
+
+--url imap:// mail.example.com/INBOX -X "STORE 1 +Flags \Seen" - Marks message 1 in the user's inbox as read
+
+As well as using the URL syntax to fetch a message it is also possible to use the custom request mechanism to perform custom FETCH operations as well. For example
+
+--url imap:// mail.example.com/INBOX -X "'FETCH 1 BODY[TEXT]" will perform the same operation as
+
+--url imap:// mail.example.com/INBOX/;UID=1/;SECTION=TEXT

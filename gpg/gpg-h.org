@@ -13,7 +13,11 @@
 |                      | trust                                                     |
 |----------------------+-----------------------------------------------------------|
 | sign (firmar)        | gpg --local-user EMAIL -o FILE.sig --sign FILE            |
+| sign (short opt)     | gpg -u EMAIL -oFILE.sig -s FILE                           |
 | verificar            | gpg -o FILE --decrypt FILE.sig                            |
 |----------------------+-----------------------------------------------------------|
 | sign detached        | gpg --local-user EMAIL -o FILE.sig --detach-sign FILE     |
 | verificar detached   | gpg --verify SIGNATURE.sig FILE ...                       |
+|----------------------+-----------------------------------------------------------|
+| user ID              | --fingerprint                                             |
+|                      |                                                           |

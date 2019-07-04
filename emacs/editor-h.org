@@ -16,4 +16,4 @@
 | keep current                                  | smerge-keep-current                         |
 | keep mine                                     | smerge-keep-mine                            |
 | keep other                                    | smerge-keep-other                           |
-|                                               |                                             |
+| open with sudo                                | C-xf /sudo::/FILENAME               |

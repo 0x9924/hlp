@@ -1,0 +1,21 @@
+#+startup:nofold
+* default files
+** setting.py
+Tells Django which pages to build in response to a browser or url
+request.
+** wsgi.py
+Stands for "web server gateway interface".  Helps Django serve our
+eventual web pages. 
+** file manage.py
+Used to execute various Django commands such as running the local web
+server or creating a new app.
+** within an app
+*** admin.py
+admin configuration 
+*** apps.py
+app configuration
+*** migration/models.py
+database models
+*** tests.py
+*** views.py
+habdle requests

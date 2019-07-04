@@ -1,3 +1,4 @@
+(require 'cl)
 (defun impares (desde hasta)
   (interactive "ndesde: \nnhasta: ")
   (let* ((minimo (/  desde 2))

@@ -1,0 +1,3 @@
+|------------------------+---------------------------------------------------------|
+| change login wallpaper | /etc/lightdm/lightdm-gtk-greeter.conf.d/30_lubuntu.conf |
+|                        |                                                         |

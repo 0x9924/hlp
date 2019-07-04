@@ -1,0 +1,6 @@
+|-------------------------------+----|
+| ip en forma canonnica         | -n |
+| sockets en listen             | -l |
+| mostrar procesos              | -p |
+| protocolos inet               | -4 |
+| listenin y non lintenin (all) | -a |
