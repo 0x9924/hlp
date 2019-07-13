@@ -18,6 +18,9 @@ tmp*
 node/ejemplos/rep-ej
 *.stackdump
 build
+obj
 *.gz
 
 *.man
+tags
+TAGS
