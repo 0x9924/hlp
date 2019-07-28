@@ -1,0 +1,27 @@
+% a4paper, letterpaper, landscape or portrait
+\documentclass[legalpaper]{minimal}
+%% ratio legalpaper: 1.643. For --nup 3x1:
+%% ratio: .55
+
+%% \usepackage[paperwidth=500pt,paperheight=800pt]{geometry}
+\usepackage{pdfpages}
+\usepackage{ifthen}
+
+\newcommand\infilename{ex}
+\newcounter{pg} %counter of pages
+\begin{document}
+\setcounter{pg}{1} %fix the first page
+
+%% get width and heigth in points with pdfinfo eg: 540 x 666
+%% get num of pages with pdfinfo, eg: 892
+
+\whiledo{\value{pg} < 9}{
+  %% viewport=  w0   h0   w-max h-max
+  \includepdf[pages=\thepg,viewport=15 400 540 420]{\infilename} %pages on the right side, (odd pages)
+  \addtocounter{pg}{1} %page increment
+
+  \includepdf[pages=\thepg,viewport=35 400 560 420]{\infilename} %pages on the right side, (odd pages)
+  \addtocounter{pg}{1} %page increment
+}
+
+\end{document}
