@@ -1,0 +1,2 @@
+$ sudo cp debian.iso /dev/sdbX
+$ sync

@@ -12,3 +12,4 @@
 | receive dir from $REMOTE_HOST port 45454               | nc -w 10 $REMOTE_HOST 45454     | tar -xz              |
 | install ssh/scp server                                 | openssh-server                  |                      |
 | start ssh                                              | service ssh start               |                      |
+| dns lookup                                             | dig <domain name>               |                      |

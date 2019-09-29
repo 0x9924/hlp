@@ -1,0 +1,4 @@
+| calendar |                    |
+|----------+--------------------|
+| i d      | diary insert entry |
+|          |                    |

@@ -1,6 +1,0 @@
-|-----------------+--------------------------------------------------------------------------------|
-| 3gp tp mp4      | ffmpeg  -i FILE.3gp -acodec copy FILE.mp4                                      |
-| trim video      | ffmpeg -i FILE.3gp -acodec copy -vcodec copy -ss 00:00:00 -t 00:00:53 FILE.3gp |
-| bajar streaming | ffmpeg -i $(youtube-dl -f 91 -g 'ytsearch:pagina.com') -c copy omg1.ts         |
-|                 |                                                                                |
-|crop video ej|ffmpeg  -i in.mp4 -strict -2 -vf crop=300:330:120:00 out.mp4|

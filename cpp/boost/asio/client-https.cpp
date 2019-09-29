@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
 
         // Get a list of endpoints corresponding to the server name.
         tcp::resolver resolver(io_service);
-        tcp::resolver::query query(input.server_name, "http");
+        tcp::resolver::query query(input.server_name, "https");
         tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
 
         // Try each endpoint until we successfully establish a
