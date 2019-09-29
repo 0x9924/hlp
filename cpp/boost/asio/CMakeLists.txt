@@ -1,34 +1,38 @@
 cmake_minimum_required(VERSION 2.8.9)  
 project(hlp/cpp/boost/asio)  
 
-
-set(BOOST_ROOT /opt/boost)
 set(Boost_USE_STATIC_LIBS ON)
-find_package(Threads)
-include_directories(${Boost_INCLUDE_DIR})
 
+# find_package(Threads)
 find_package(Boost COMPONENTS system)
+find_package(Boost COMPONENTS thread)
+
+include_directories(SYSTEM ${Boost_INCLUDE_DIR})
 
 
-add_executable(client client.cpp)
-target_link_libraries(client ${Boost_LIBRARIES})
-target_link_libraries(client ${CMAKE_THREAD_LIBS_INIT} )
+file( GLOB TCP_EX_SOURCES "tcp/*.cpp")
+foreach(tcp_ex_source ${TCP_EX_SOURCES})
+  string( REPLACE ".cpp" "" namepath ${tcp_ex_source} )
+  get_filename_component(fname ${namepath} NAME)
+  set(name tcp_${fname})
+  add_executable( ${name} ${tcp_ex_source} )
+  target_compile_options(${name} PRIVATE -lboost_system -lboost_thread -pthread)
+  target_link_libraries(${name} ${Boost_LIBRARIES})
+  target_link_libraries(${name} ${CMAKE_THREAD_LIBS_INIT} )
 
-add_executable(client-http client-http.cpp)
-target_link_libraries(client-http ${Boost_LIBRARIES})
-target_link_libraries(client-http ${CMAKE_THREAD_LIBS_INIT} )
+endforeach(tcp_ex_source ${TEST_SOURCES})
 
-add_executable(client-https client-https.cpp)
-target_link_libraries(client-https ${Boost_LIBRARIES})
-target_link_libraries(client-https ${CMAKE_THREAD_LIBS_INIT} )
-
-
-# beast
-# add_library(boost_beast INTERFACE)
-
-# target_include_directories(boost_beast SYSTEM PUBLIC "${CMAKE_CURRENT_LIST_DIR}/../beast/include")
-
-# add_library(my_lib ${SOURCE_FILES})
-# target_link_libraries(my_lib boost_beast)
 
                          
+# add_executable(client client.cpp)
+# target_link_libraries(client ${Boost_LIBRARIES})
+# target_link_libraries(client ${CMAKE_THREAD_LIBS_INIT} )
+
+# add_executable(client-http client-http.cpp)
+# target_link_libraries(client-http ${Boost_LIBRARIES})
+# target_link_libraries(client-http ${CMAKE_THREAD_LIBS_INIT} )
+
+# add_executable(client-https client-https.cpp)
+# target_link_libraries(client-https ${Boost_LIBRARIES})
+# target_link_libraries(client-https ${CMAKE_THREAD_LIBS_INIT} )
+

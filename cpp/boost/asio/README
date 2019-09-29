@@ -1,0 +1,7 @@
+README
+
+to build with g++
+
+g++ client.cpp -lboost_system -pthread
+g++ tcp/blocking-tcp-echo-server.cpp -lboost_system -lboost_thread -pthread
+
