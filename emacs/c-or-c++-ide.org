@@ -1,0 +1,14 @@
+#+startup:nofold
+http://tuhdo.github.io/c-ide.html
+* setup
+** surce code navigation
+*** installation
+install global from sources:
+http://tamacom.com/global/global-6.6.3.tar.gz
+
+in emacs:
+install ggtags (or helm + helm-tags)
+
+*** usage
+$ gtags
+M-x ggtags-mode 
