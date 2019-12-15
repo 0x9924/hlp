@@ -1,4 +1,5 @@
-|------------+---------------|
-| rip cd     | cdparanoia -B |
-| wav to mp3 | lame FILENAME |
-|            |               |
+|-------------+--------------------------------------------------------|
+| rip cd      | cdparanoia -B                                          |
+| wav to mp3  | lame FILENAME                                          |
+| flac to mp3 | parallel ffmpeg -i {} -qscale:a 0 {.}.mp3 ::: ./*.flac |
+

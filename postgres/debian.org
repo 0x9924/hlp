@@ -1,0 +1,7 @@
+#+startup:nofold
+* faq
+** start server:
+
+sudo service posgresql {start|stop|restart|reload|force-reload|status} [version..]
+
+sudo /etc/init.d/postgresql start

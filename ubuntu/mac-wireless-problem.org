@@ -1,1 +1,4 @@
 https://wireless.wiki.kernel.org/en/users/Drivers/b43
+
+https://askubuntu.com/questions/730799/installing-firmware-b43-installer-offline
+
