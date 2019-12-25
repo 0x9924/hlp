@@ -2,10 +2,11 @@
 |---+---------------------------------------------------------------------------------|
 |   | sudo su - postgres                                                              |
 |   | psql [TABLE_NAME]                                                               |
-|   | CREATE DATABASE dbname;                                                         |
+|   | CREATE DATABASE dbname WITH OWNER username;                                     |
 |   | DROP DATABASE dbname                                                            |
-|   | CREATE USER myprojectuser WITH PASSWORD 'password';                             |
+|   | CREATE USER myprojectuser WITH PASSWORD 'password' CREATEDB;                    |
 |   | ALTER ROLE myprojectuser SET client_encoding TO 'utf8';                         |
 |   | ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed'; |
 |   | ALTER ROLE myprojectuser SET timezone TO 'UTC';                                 |
-|   | GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;                                                                                |
+|   | GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;                    |
+|   | Alter User user_name With Password 'passwd';                                    |
