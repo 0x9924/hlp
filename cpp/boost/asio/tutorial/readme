@@ -1,0 +1,8 @@
+to build this files:
+
+g++ FILE -lboost_system -lboost_thread -pthread
+
+
+or just use cmake
+
+

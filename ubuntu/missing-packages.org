@@ -1,0 +1,12 @@
+#+startup:nofold
+* missing pckages:
++ emacs
++ git
++ cmake
++ nmap
++ r-base-core r-base-dev
++ gparted
++ openssh-server
++ mplayer
++ mupdf
+
