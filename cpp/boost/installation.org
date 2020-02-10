@@ -1,0 +1,21 @@
+#+startup:nofold
+* install boost 
+** Get boost
+*** from tar
+
+$ wget https://boost.com/release/boost.tar
+$ cd ~/usr/local/include~
+$ tar -xf ~/Downloads/boost.tar
+
+*** from git repo
+ https://github.com/boostorg/boost/wiki/Getting-Started%3A-Overview
+
+$ git clone --recursive https://github.com/boostorg/boost.git
+$ cd boost
+$ git checkout develop # or whatever branch you want to use
+
+** build and install 
+
+$ cd boost
+$ bootstrap.sh --prefix=/usr/local/
+$ ./b2 install # or ./b2 headers

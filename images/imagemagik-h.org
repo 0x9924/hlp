@@ -1,2 +1,3 @@
 convert -density 200 -colorspace Gray input.pdf -geometry 1000 ouput.png
+convert -brightness-contraste 20x25 input output
 rotar imagenmogrify -rotate '90>' presupuesto-durlock-2.jpeg 

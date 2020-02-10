@@ -1,0 +1,6 @@
+|-------+-------------------------------------------------|
+| http  | telnet web.com 80                               |
+| http  | nc web.com 80                                   |
+| https | ncat --ssl web.com 443                          |
+| https | openssl s_client -connect stackoverflow.com:443 |
+|       |                                                 |
