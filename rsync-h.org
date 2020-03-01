@@ -1,0 +1,4 @@
+|------+-------------------------------|
+| diff | rsync -avnc $SRC $TARGET      |
+| cp   | rsync -av /src/foo/ /dest/foo |
+
