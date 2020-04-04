@@ -1,0 +1,28 @@
+#+startup+nofold
+* create a user and login
+1 . Start postgresql:
+$ sudo pg_ctlcluster 11 main start
+
+2. Switch user
+$ sudo su - postgres
+
+3. Run psql
+psql
+
+4. Create the user
+\# CREATE USER <myprojectuser> WITH PASSWORD 'password' CREATEDB;
+
+also:
+
+$ createuser --interactive
+
+5 Create users database
+\# CREATE DATABASE dbname WITH OWNER username;
+
+create database <myprojectuser>
+
+6 Create linux user with that name
+sudo adduser <myprojectuser>
+
+7 Open psql
+sudo -u <myprojectuser> psql 
